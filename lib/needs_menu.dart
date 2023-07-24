@@ -19,113 +19,103 @@ class NeedMenu extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Pinned.fromPins(
-            Pin(size: 500.0, middle: 0.290),
-            Pin(size: 580.0, middle: 0.5),
-            child: Stack(
-              children: <Widget>[
-                Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xffffffff),
-                      borderRadius: BorderRadius.circular(28.0),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Color(0x29000000),
-                          offset: Offset(0, 4),
-                          blurRadius: 7,
-                        ),
-                      ],
-                    ),
-                    child: GestureDetector(
-                      onTap: () {
-                        TextToSpeech.speak('I need the toilet.');
-                      },
-                    )),
-                Pinned.fromPins(
-                  Pin(start: 80.0, end: 43.0),
-                  Pin(size: 92.0, end: 20.0),
-                  child: const Text(
-                    'The Toilet',
-                    style: TextStyle(
-                      fontFamily: 'Roboto Mono',
-                      fontSize: 70,
-                      color: Color(0xff32325d),
-                    ),
-                    softWrap: false,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 270.0, middle: 0.5),
-                  Pin(size: 315.0, start: 80.0),
-                  child: GestureDetector(
-                    onTap: () {
-                      TextToSpeech.speak('I need the toilet.');
-                    },
-                    child: SvgPicture.string(
-                      _svg_vwplbo,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                )
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 500.0, end: 30.0),
-            Pin(size: 580.0, middle: 0.5),
-            child: Stack(
-              children: <Widget>[
-                Stack(
+              Pin(size: 500.0, middle: 0.290), Pin(size: 580.0, middle: 0.5),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I need the toilet.');
+                },
+                child: Stack(
                   children: <Widget>[
                     Container(
-                        decoration: BoxDecoration(
-                          color: const Color(0xffffffff),
-                          borderRadius: BorderRadius.circular(28.0),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Color(0x29000000),
-                              offset: Offset(0, 4),
-                              blurRadius: 7,
-                            ),
-                          ],
-                        ),
-                        child: GestureDetector(
-                          onTap: () {
-                            TextToSpeech.speak('I need a nurse.');
-                          },
-                        )),
+                      decoration: BoxDecoration(
+                        color: const Color(0xffffffff),
+                        borderRadius: BorderRadius.circular(28.0),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0x29000000),
+                            offset: Offset(0, 4),
+                            blurRadius: 7,
+                          ),
+                        ],
+                      ),
+                    ),
                     Pinned.fromPins(
-                      Pin(size: 300, middle: 0.63),
-                      Pin(size: 81.0, end: 20),
+                      Pin(start: 80.0, end: 43.0),
+                      Pin(size: 92.0, end: 20.0),
                       child: const Text(
-                        'A Nurse',
+                        'The Toilet',
                         style: TextStyle(
                           fontFamily: 'Roboto Mono',
-                          fontSize: 61,
+                          fontSize: 70,
                           color: Color(0xff32325d),
                         ),
                         softWrap: false,
                       ),
                     ),
-                  ],
-                ),
-                Pinned.fromPins(Pin(size: 247.5, middle: 0.4992),
-                    Pin(size: 330.0, start: 71.0),
-                    child: GestureDetector(
-                      onTap: () {
-                        TextToSpeech.speak('I need a nurse.');
-                      },
-                      child:
-                          // Adobe XD layer: 'restaurant_FILL0_wg…' (shape)
-                          SvgPicture.string(
-                        _svg_ete94n,
+                    Pinned.fromPins(
+                      Pin(size: 270.0, middle: 0.5),
+                      Pin(size: 315.0, start: 80.0),
+                      child: SvgPicture.string(
+                        _svg_vwplbo,
                         allowDrawingOutsideViewBox: true,
                         fit: BoxFit.fill,
                       ),
-                    )),
-              ],
-            ),
-          ),
+                    ),
+                  ],
+                ),
+              )),
+          Pinned.fromPins(
+              Pin(size: 500.0, end: 30.0), Pin(size: 580.0, middle: 0.5),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I need a nurse.');
+                },
+                child: Stack(
+                  children: <Widget>[
+                    Stack(
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                            color: const Color(0xffffffff),
+                            borderRadius: BorderRadius.circular(28.0),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Color(0x29000000),
+                                offset: Offset(0, 4),
+                                blurRadius: 7,
+                              ),
+                            ],
+                          ),
+                        ),
+                        Pinned.fromPins(
+                          Pin(size: 300, middle: 0.63),
+                          Pin(size: 81.0, end: 20),
+                          child: const Text(
+                            'A Nurse',
+                            style: TextStyle(
+                              fontFamily: 'Roboto Mono',
+                              fontSize: 61,
+                              color: Color(0xff32325d),
+                            ),
+                            softWrap: false,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Pinned.fromPins(Pin(size: 247.5, middle: 0.4992),
+                        Pin(size: 330.0, start: 71.0),
+                        child: GestureDetector(
+                          child:
+                              // Adobe XD layer: 'restaurant_FILL0_wg…' (shape)
+                              SvgPicture.string(
+                            _svg_ete94n,
+                            allowDrawingOutsideViewBox: true,
+                            fit: BoxFit.fill,
+                          ),
+                        )),
+                  ],
+                ),
+              )),
           Pinned.fromPins(
             Pin(size: 180.0, start: 15.7),
             Pin(size: 246.5, middle: 0.22),

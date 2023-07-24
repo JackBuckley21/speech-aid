@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:todo/main_menu.dart';
 import 'package:todo/main_selection.dart';
+import 'package:todo/speech_tts.dart';
 
 import './back_button.dart';
 
@@ -19,232 +20,15 @@ class SelfCareMenu extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Pinned.fromPins(
-            Pin(size: 340, middle: 0.605),
-            Pin(size: 370, start: 20),
-            child: Stack(
-              children: <Widget>[
-                Stack(
+              Pin(size: 340, middle: 0.605), Pin(size: 370, start: 20),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak(
+                      'I need a haircut. Can you ask Sue please');
+                },
+                child: Stack(
                   children: <Widget>[
                     Stack(
-                      children: <Widget>[
-                        Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffffffff),
-                            borderRadius: BorderRadius.circular(28.0),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0x29000000),
-                                offset: Offset(0, 4),
-                                blurRadius: 7,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Pinned.fromPins(
-                          Pin(size: 185.0, middle: 0.6),
-                          Pin(size: 58.0, end: 20),
-                          child: const Text(
-                            'Haircut',
-                            style: TextStyle(
-                              fontFamily: 'Roboto Mono',
-                              fontSize: 44,
-                              color: Color(0xff32325d),
-                            ),
-                            softWrap: false,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                Pinned.fromPins(
-                  Pin(size: 219.9, middle: 0.5171),
-                  Pin(size: 219.9, start: 61.5),
-                  child:
-                      // Adobe XD layer: 'face_FILL1_wght400_…' (shape)
-                      SvgPicture.string(
-                    _svg_cniv5y,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 167.9, end: 0),
-                  Pin(size: 167.9, start: 20),
-                  child:
-                      // Adobe XD layer: 'cut_FILL0_wght400_G…' (shape)
-                      SvgPicture.string(
-                    _svg_to8lgl,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 340, middle: 0.23),
-            Pin(size: 370.0, end: 20),
-            child: Stack(
-              children: <Widget>[
-                Stack(
-                  children: <Widget>[
-                    Stack(
-                      children: <Widget>[
-                        Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffffffff),
-                            borderRadius: BorderRadius.circular(28.0),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0x29000000),
-                                offset: Offset(0, 4),
-                                blurRadius: 7,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Pinned.fromPins(
-                          Pin(size: 234.0, start: 75.0),
-                          Pin(size: 52.0, end: 45),
-                          child: const Text(
-                            'Cut Finger',
-                            style: TextStyle(
-                              fontFamily: 'Roboto Mono',
-                              fontSize: 39,
-                              color: Color(0xff32325d),
-                            ),
-                            softWrap: false,
-                          ),
-                        ),
-                        Pinned.fromPins(
-                          Pin(size: 117.0, middle: 0.55),
-                          Pin(size: 52.0, end: 5),
-                          child: const Text(
-                            'Nails',
-                            style: TextStyle(
-                              fontFamily: 'Roboto Mono',
-                              fontSize: 39,
-                              color: Color(0xff32325d),
-                            ),
-                            softWrap: false,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                Pinned.fromPins(
-                  Pin(start: 44.2, end: 43.5),
-                  Pin(size: 273.5, start: 28),
-                  child:
-                      // Adobe XD layer: 'front_hand_FILL0_wg…' (shape)
-                      SvgPicture.string(
-                    _svg_dm8o,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 117.8, end: 40.8),
-                  Pin(size: 117.9, start: 23.7),
-                  child:
-                      // Adobe XD layer: 'cut_FILL0_wght400_G…' (shape)
-                      SvgPicture.string(
-                    _svg_ba64w4,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 340, middle: 0.605),
-            Pin(size: 370, end: 20),
-            child: Stack(
-              children: <Widget>[
-                Stack(
-                  children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xffffffff),
-                        borderRadius: BorderRadius.circular(28.0),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color(0x29000000),
-                            offset: Offset(0, 4),
-                            blurRadius: 7,
-                          ),
-                        ],
-                      ),
-                    ),
-                    Pinned.fromPins(
-                      Pin(size: 168.0, middle: 0.55),
-                      Pin(size: 53.0, end: 47.3),
-                      child: const Text(
-                        'Cut Toe',
-                        style: TextStyle(
-                          fontFamily: 'Roboto Mono',
-                          fontSize: 40,
-                          color: Color(0xff32325d),
-                        ),
-                        softWrap: false,
-                      ),
-                    ),
-                  ],
-                ),
-                Pinned.fromPins(
-                  Pin(size: 120.0, middle: 0.55),
-                  Pin(size: 53.0, end: 8.2),
-                  child: const Text(
-                    'Nails',
-                    style: TextStyle(
-                      fontFamily: 'Roboto Mono',
-                      fontSize: 40,
-                      color: Color(0xff32325d),
-                    ),
-                    softWrap: false,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 49.6, end: 52.2),
-                  Pin(size: 263.0, middle: -0.15),
-                  child:
-                      // Adobe XD layer: 'barefoot_FILL0_wght…' (shape)
-                      SvgPicture.string(
-                    _svg_q1ss2m,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Align(
-                  alignment: const Alignment(0.227, 0.248),
-                  child: SizedBox(
-                    width: 136.0,
-                    height: 136.0,
-                    child:
-                        // Adobe XD layer: 'cut_FILL0_wght400_G…' (shape)
-                        SvgPicture.string(
-                      _svg_yk1q1d,
-                      allowDrawingOutsideViewBox: true,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 340, middle: 0.23),
-            Pin(size: 370, start: 20.9),
-            child: Stack(
-              children: <Widget>[
-                Align(
-                  alignment: Alignment.bottomLeft,
-                  child: SizedBox(
-                    width: 365.0,
-                    height: 412.0,
-                    child: Stack(
                       children: <Widget>[
                         Stack(
                           children: <Widget>[
@@ -262,10 +46,10 @@ class SelfCareMenu extends StatelessWidget {
                               ),
                             ),
                             Pinned.fromPins(
-                              Pin(size: 238.0, middle: 0.55),
+                              Pin(size: 185.0, middle: 0.6),
                               Pin(size: 58.0, end: 20),
                               child: const Text(
-                                'Comb Hair',
+                                'Haircut',
                                 style: TextStyle(
                                   fontFamily: 'Roboto Mono',
                                   fontSize: 44,
@@ -278,41 +62,118 @@ class SelfCareMenu extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 219.9, start: 65),
-                  Pin(size: 219.9, middle: 0.4),
-                  child:
-                      // Adobe XD layer: 'face_FILL1_wght400_…' (shape)
-                      SvgPicture.string(
-                    _svg_l99mo6,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Align(
-                  alignment: const Alignment(0.8, -0.8),
-                  child: SizedBox(
-                    width: 144.0,
-                    height: 144.0,
-                    child:
-                        // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
-                        SvgPicture.string(
-                      _svg_hztorj,
-                      allowDrawingOutsideViewBox: true,
+                    Pinned.fromPins(
+                      Pin(size: 219.9, middle: 0.5171),
+                      Pin(size: 219.9, start: 61.5),
+                      child:
+                          // Adobe XD layer: 'face_FILL1_wght400_…' (shape)
+                          SvgPicture.string(
+                        _svg_cniv5y,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
+                      ),
                     ),
-                  ),
+                    Pinned.fromPins(
+                      Pin(size: 167.9, end: 0),
+                      Pin(size: 167.9, start: 20),
+                      child:
+                          // Adobe XD layer: 'cut_FILL0_wght400_G…' (shape)
+                          SvgPicture.string(
+                        _svg_to8lgl,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-          ),
+              )),
           Pinned.fromPins(
-            Pin(size: 340, middle: 0.98),
-            Pin(size: 370, start: 20),
-            child: Stack(
-              children: <Widget>[
-                Stack(
+              Pin(size: 340, middle: 0.23), Pin(size: 370.0, end: 20),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('Can you cut my finger nails please?.');
+                },
+                child: Stack(
+                  children: <Widget>[
+                    Stack(
+                      children: <Widget>[
+                        Stack(
+                          children: <Widget>[
+                            Container(
+                              decoration: BoxDecoration(
+                                color: const Color(0xffffffff),
+                                borderRadius: BorderRadius.circular(28.0),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Color(0x29000000),
+                                    offset: Offset(0, 4),
+                                    blurRadius: 7,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Pinned.fromPins(
+                              Pin(size: 234.0, start: 75.0),
+                              Pin(size: 52.0, end: 45),
+                              child: const Text(
+                                'Cut Finger',
+                                style: TextStyle(
+                                  fontFamily: 'Roboto Mono',
+                                  fontSize: 39,
+                                  color: Color(0xff32325d),
+                                ),
+                                softWrap: false,
+                              ),
+                            ),
+                            Pinned.fromPins(
+                              Pin(size: 117.0, middle: 0.55),
+                              Pin(size: 52.0, end: 5),
+                              child: const Text(
+                                'Nails',
+                                style: TextStyle(
+                                  fontFamily: 'Roboto Mono',
+                                  fontSize: 39,
+                                  color: Color(0xff32325d),
+                                ),
+                                softWrap: false,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Pinned.fromPins(
+                      Pin(start: 44.2, end: 43.5),
+                      Pin(size: 273.5, start: 28),
+                      child:
+                          // Adobe XD layer: 'front_hand_FILL0_wg…' (shape)
+                          SvgPicture.string(
+                        _svg_dm8o,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    Pinned.fromPins(
+                      Pin(size: 117.8, end: 40.8),
+                      Pin(size: 117.9, start: 23.7),
+                      child:
+                          // Adobe XD layer: 'cut_FILL0_wght400_G…' (shape)
+                          SvgPicture.string(
+                        _svg_ba64w4,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ],
+                ),
+              )),
+          Pinned.fromPins(
+              Pin(size: 340, middle: 0.605), Pin(size: 370, end: 20),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('Can you cut my toe nails please?');
+                },
+                child: Stack(
                   children: <Widget>[
                     Stack(
                       children: <Widget>[
@@ -330,13 +191,13 @@ class SelfCareMenu extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromPins(
-                          Pin(size: 132.0, middle: 0.495),
-                          Pin(size: 58.0, end: 20),
+                          Pin(size: 168.0, middle: 0.55),
+                          Pin(size: 53.0, end: 47.3),
                           child: const Text(
-                            'Shave',
+                            'Cut Toe',
                             style: TextStyle(
                               fontFamily: 'Roboto Mono',
-                              fontSize: 44,
+                              fontSize: 40,
                               color: Color(0xff32325d),
                             ),
                             softWrap: false,
@@ -344,152 +205,308 @@ class SelfCareMenu extends StatelessWidget {
                         ),
                       ],
                     ),
+                    Pinned.fromPins(
+                      Pin(size: 120.0, middle: 0.55),
+                      Pin(size: 53.0, end: 8.2),
+                      child: const Text(
+                        'Nails',
+                        style: TextStyle(
+                          fontFamily: 'Roboto Mono',
+                          fontSize: 40,
+                          color: Color(0xff32325d),
+                        ),
+                        softWrap: false,
+                      ),
+                    ),
+                    Pinned.fromPins(
+                      Pin(start: 49.6, end: 52.2),
+                      Pin(size: 263.0, middle: -0.15),
+                      child:
+                          // Adobe XD layer: 'barefoot_FILL0_wght…' (shape)
+                          SvgPicture.string(
+                        _svg_q1ss2m,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    Align(
+                      alignment: const Alignment(0.227, 0.248),
+                      child: SizedBox(
+                        width: 136.0,
+                        height: 136.0,
+                        child:
+                            // Adobe XD layer: 'cut_FILL0_wght400_G…' (shape)
+                            SvgPicture.string(
+                          _svg_yk1q1d,
+                          allowDrawingOutsideViewBox: true,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
-                Pinned.fromPins(
-                  Pin(start: 72.1, end: 72.8),
-                  Pin(size: 200, start: 55),
-                  child:
-                      // Adobe XD layer: 'face_FILL1_wght400_…' (shape)
-                      SvgPicture.string(
-                    _svg_sp6il2,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Align(
-                  alignment: const Alignment(-0.412, 0.256),
-                  child: SizedBox(
-                    width: 9.0,
-                    height: 12.0,
-                    child:
-                        // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
-                        SvgPicture.string(
-                      _svg_uvc9k,
-                      allowDrawingOutsideViewBox: true,
+              )),
+          Pinned.fromPins(
+              Pin(size: 340, middle: 0.23), Pin(size: 370, start: 20.9),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I would like to comb my hair.');
+                },
+                child: Stack(
+                  children: <Widget>[
+                    Align(
+                      alignment: Alignment.bottomLeft,
+                      child: SizedBox(
+                        width: 365.0,
+                        height: 412.0,
+                        child: Stack(
+                          children: <Widget>[
+                            Stack(
+                              children: <Widget>[
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xffffffff),
+                                    borderRadius: BorderRadius.circular(28.0),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        color: Color(0x29000000),
+                                        offset: Offset(0, 4),
+                                        blurRadius: 7,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Pinned.fromPins(
+                                  Pin(size: 238.0, middle: 0.55),
+                                  Pin(size: 58.0, end: 20),
+                                  child: const Text(
+                                    'Comb Hair',
+                                    style: TextStyle(
+                                      fontFamily: 'Roboto Mono',
+                                      fontSize: 44,
+                                      color: Color(0xff32325d),
+                                    ),
+                                    softWrap: false,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                Align(
-                  alignment: const Alignment(-0.429, 0.236),
-                  child: SizedBox(
-                    width: 9.0,
-                    height: 12.0,
-                    child:
-                        // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
-                        SvgPicture.string(
-                      _svg_qhg4o,
-                      allowDrawingOutsideViewBox: true,
+                    Pinned.fromPins(
+                      Pin(size: 219.9, start: 65),
+                      Pin(size: 219.9, middle: 0.4),
+                      child:
+                          // Adobe XD layer: 'face_FILL1_wght400_…' (shape)
+                          SvgPicture.string(
+                        _svg_l99mo6,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
+                      ),
                     ),
-                  ),
-                ),
-                Align(
-                  alignment: const Alignment(-0.389, 0.266),
-                  child: SizedBox(
-                    width: 9.0,
-                    height: 12.0,
-                    child:
-                        // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
-                        SvgPicture.string(
-                      _svg_i30yl,
-                      allowDrawingOutsideViewBox: true,
+                    Align(
+                      alignment: const Alignment(0.8, -0.8),
+                      child: SizedBox(
+                        width: 144.0,
+                        height: 144.0,
+                        child:
+                            // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
+                            SvgPicture.string(
+                          _svg_hztorj,
+                          allowDrawingOutsideViewBox: true,
+                        ),
+                      ),
                     ),
-                  ),
+                  ],
                 ),
-                Align(
-                  alignment: const Alignment(0.36, 0.271),
-                  child: SizedBox(
-                    width: 10.0,
-                    height: 12.0,
-                    child:
-                        // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
-                        SvgPicture.string(
-                      _svg_lzqw17,
-                      allowDrawingOutsideViewBox: true,
+              )),
+          Pinned.fromPins(
+              Pin(size: 340, middle: 0.98), Pin(size: 370, start: 20),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('Can you give me a shave please');
+                },
+                child: Stack(
+                  children: <Widget>[
+                    Stack(
+                      children: <Widget>[
+                        Stack(
+                          children: <Widget>[
+                            Container(
+                              decoration: BoxDecoration(
+                                color: const Color(0xffffffff),
+                                borderRadius: BorderRadius.circular(28.0),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Color(0x29000000),
+                                    offset: Offset(0, 4),
+                                    blurRadius: 7,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Pinned.fromPins(
+                              Pin(size: 132.0, middle: 0.495),
+                              Pin(size: 58.0, end: 20),
+                              child: const Text(
+                                'Shave',
+                                style: TextStyle(
+                                  fontFamily: 'Roboto Mono',
+                                  fontSize: 44,
+                                  color: Color(0xff32325d),
+                                ),
+                                softWrap: false,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                  ),
-                ),
-                Align(
-                  alignment: const Alignment(0.388, 0.266),
-                  child: SizedBox(
-                    width: 10.0,
-                    height: 12.0,
-                    child:
-                        // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
-                        SvgPicture.string(
-                      _svg_sbhq,
-                      allowDrawingOutsideViewBox: true,
+                    Pinned.fromPins(
+                      Pin(start: 72.1, end: 72.8),
+                      Pin(size: 200, start: 55),
+                      child:
+                          // Adobe XD layer: 'face_FILL1_wght400_…' (shape)
+                          SvgPicture.string(
+                        _svg_sp6il2,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
+                      ),
                     ),
-                  ),
-                ),
-                Align(
-                  alignment: const Alignment(0.399, 0.241),
-                  child: SizedBox(
-                    width: 10.0,
-                    height: 12.0,
-                    child:
-                        // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
-                        SvgPicture.string(
-                      _svg_fbfr2k,
-                      allowDrawingOutsideViewBox: true,
+                    Align(
+                      alignment: const Alignment(-0.412, 0.256),
+                      child: SizedBox(
+                        width: 9.0,
+                        height: 12.0,
+                        child:
+                            // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
+                            SvgPicture.string(
+                          _svg_uvc9k,
+                          allowDrawingOutsideViewBox: true,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                Align(
-                  alignment: const Alignment(0.016, 0.383),
-                  child: SizedBox(
-                    width: 3.0,
-                    height: 12.0,
-                    child:
-                        // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
-                        SvgPicture.string(
-                      _svg_gwvfms,
-                      allowDrawingOutsideViewBox: true,
+                    Align(
+                      alignment: const Alignment(-0.429, 0.236),
+                      child: SizedBox(
+                        width: 9.0,
+                        height: 12.0,
+                        child:
+                            // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
+                            SvgPicture.string(
+                          _svg_qhg4o,
+                          allowDrawingOutsideViewBox: true,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                Align(
-                  alignment: const Alignment(-0.012, 0.383),
-                  child: SizedBox(
-                    width: 3.0,
-                    height: 12.0,
-                    child:
-                        // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
-                        SvgPicture.string(
-                      _svg_vr6y5g,
-                      allowDrawingOutsideViewBox: true,
+                    Align(
+                      alignment: const Alignment(-0.389, 0.266),
+                      child: SizedBox(
+                        width: 9.0,
+                        height: 12.0,
+                        child:
+                            // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
+                            SvgPicture.string(
+                          _svg_i30yl,
+                          allowDrawingOutsideViewBox: true,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                Align(
-                  alignment: const Alignment(-0.04, 0.383),
-                  child: SizedBox(
-                    width: 3.0,
-                    height: 12.0,
-                    child:
-                        // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
-                        SvgPicture.string(
-                      _svg_wz2j4s,
-                      allowDrawingOutsideViewBox: true,
+                    Align(
+                      alignment: const Alignment(0.36, 0.271),
+                      child: SizedBox(
+                        width: 10.0,
+                        height: 12.0,
+                        child:
+                            // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
+                            SvgPicture.string(
+                          _svg_lzqw17,
+                          allowDrawingOutsideViewBox: true,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                Align(
-                  alignment: const Alignment(-0.067, 0.383),
-                  child: SizedBox(
-                    width: 3.0,
-                    height: 12.0,
-                    child:
-                        // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
-                        SvgPicture.string(
-                      _svg_i4r0m4,
-                      allowDrawingOutsideViewBox: true,
+                    Align(
+                      alignment: const Alignment(0.388, 0.266),
+                      child: SizedBox(
+                        width: 10.0,
+                        height: 12.0,
+                        child:
+                            // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
+                            SvgPicture.string(
+                          _svg_sbhq,
+                          allowDrawingOutsideViewBox: true,
+                        ),
+                      ),
                     ),
-                  ),
+                    Align(
+                      alignment: const Alignment(0.399, 0.241),
+                      child: SizedBox(
+                        width: 10.0,
+                        height: 12.0,
+                        child:
+                            // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
+                            SvgPicture.string(
+                          _svg_fbfr2k,
+                          allowDrawingOutsideViewBox: true,
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: const Alignment(0.016, 0.383),
+                      child: SizedBox(
+                        width: 3.0,
+                        height: 12.0,
+                        child:
+                            // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
+                            SvgPicture.string(
+                          _svg_gwvfms,
+                          allowDrawingOutsideViewBox: true,
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: const Alignment(-0.012, 0.383),
+                      child: SizedBox(
+                        width: 3.0,
+                        height: 12.0,
+                        child:
+                            // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
+                            SvgPicture.string(
+                          _svg_vr6y5g,
+                          allowDrawingOutsideViewBox: true,
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: const Alignment(-0.04, 0.383),
+                      child: SizedBox(
+                        width: 3.0,
+                        height: 12.0,
+                        child:
+                            // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
+                            SvgPicture.string(
+                          _svg_wz2j4s,
+                          allowDrawingOutsideViewBox: true,
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: const Alignment(-0.067, 0.383),
+                      child: SizedBox(
+                        width: 3.0,
+                        height: 12.0,
+                        child:
+                            // Adobe XD layer: 'self_care_FILL0_wgh…' (shape)
+                            SvgPicture.string(
+                          _svg_i4r0m4,
+                          allowDrawingOutsideViewBox: true,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-          ),
+              )),
           Pinned.fromPins(
             Pin(size: 81.6, start: 55.0),
             Pin(size: 137.5, end: 40.0),

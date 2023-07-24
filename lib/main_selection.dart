@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:todo/Toiletries_Menu.dart';
 import 'package:todo/back_button.dart';
 import 'package:todo/self_care_selection_menu.dart';
+import 'package:todo/speech_tts.dart';
 import 'package:todo/tea_menu.dart';
 
 import 'clothing_selection.dart';
@@ -24,51 +25,55 @@ class MainSelection extends StatelessWidget {
           Pinned.fromPins(
             Pin(size: 340, middle: 0.23),
             Pin(size: 370, start: 20.9),
-            child: Stack(
-              children: <Widget>[
-                Stack(
+            child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I want a drink.');
+                },
+                child: Stack(
                   children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xffffffff),
-                        borderRadius: BorderRadius.circular(28.0),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color(0x29000000),
-                            offset: Offset(0, 4),
-                            blurRadius: 7,
+                    Stack(
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                            color: const Color(0xffffffff),
+                            borderRadius: BorderRadius.circular(28.0),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Color(0x29000000),
+                                offset: Offset(0, 4),
+                                blurRadius: 7,
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
-                    ),
-                    Pinned.fromPins(
-                      Pin(size: 185.0, middle: 0.59),
-                      Pin(size: 58.0, end: 20),
-                      child: const Text(
-                        'A Drink',
-                        style: TextStyle(
-                          fontFamily: 'Roboto Mono',
-                          fontSize: 44,
-                          color: Color(0xff32325d),
                         ),
-                        softWrap: false,
-                      ),
+                        Pinned.fromPins(
+                          Pin(size: 185.0, middle: 0.59),
+                          Pin(size: 58.0, end: 20),
+                          child: const Text(
+                            'A Drink',
+                            style: TextStyle(
+                              fontFamily: 'Roboto Mono',
+                              fontSize: 44,
+                              color: Color(0xff32325d),
+                            ),
+                            softWrap: false,
+                          ),
+                        ),
+                      ],
                     ),
+                    Pinned.fromPins(Pin(start: 83.9, end: 82.9),
+                        Pin(size: 219.9, start: 61.6),
+                        child: GestureDetector(
+                          child:
+                              // Adobe XD layer: 'water_full_FILL0_wg…' (shape)
+                              SvgPicture.string(
+                            _svg_h4mzdo,
+                            allowDrawingOutsideViewBox: true,
+                            fit: BoxFit.fill,
+                          ),
+                        ))
                   ],
-                ),
-                Pinned.fromPins(
-                  Pin(start: 83.9, end: 82.9),
-                  Pin(size: 219.9, start: 61.6),
-                  child:
-                      // Adobe XD layer: 'water_full_FILL0_wg…' (shape)
-                      SvgPicture.string(
-                    _svg_h4mzdo,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ],
-            ),
+                )),
           ),
           Pinned.fromPins(
             Pin(size: 340, middle: 0.605),
@@ -242,55 +247,59 @@ class MainSelection extends StatelessWidget {
           Pinned.fromPins(
             Pin(size: 340, middle: 0.605),
             Pin(size: 370, end: 20),
-            child: Stack(
-              children: <Widget>[
-                Stack(
+            child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I want to read the Newspaper.');
+                },
+                child: Stack(
                   children: <Widget>[
                     Stack(
                       children: <Widget>[
-                        Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffffffff),
-                            borderRadius: BorderRadius.circular(28.0),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0x29000000),
-                                offset: Offset(0, 4),
-                                blurRadius: 7,
+                        Stack(
+                          children: <Widget>[
+                            Container(
+                              decoration: BoxDecoration(
+                                color: const Color(0xffffffff),
+                                borderRadius: BorderRadius.circular(28.0),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Color(0x29000000),
+                                    offset: Offset(0, 4),
+                                    blurRadius: 7,
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        ),
-                        Pinned.fromPins(
-                          Pin(size: 250.0, middle: 0.55),
-                          Pin(size: 58.0, end: 20),
-                          child: const Text(
-                            'Newspaper',
-                            style: TextStyle(
-                              fontFamily: 'Roboto Mono',
-                              fontSize: 44,
-                              color: Color(0xff32325d),
                             ),
-                            softWrap: false,
-                          ),
+                            Pinned.fromPins(
+                              Pin(size: 250.0, middle: 0.55),
+                              Pin(size: 58.0, end: 20),
+                              child: const Text(
+                                'Newspaper',
+                                style: TextStyle(
+                                  fontFamily: 'Roboto Mono',
+                                  fontSize: 44,
+                                  color: Color(0xff32325d),
+                                ),
+                                softWrap: false,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
+                    Pinned.fromPins(
+                      Pin(start: 45.5, end: 45.5),
+                      Pin(size: 210.2, middle: 0.3899),
+                      child:
+                          // Adobe XD layer: 'podiatry_FILL0_wght…' (shape)
+                          SvgPicture.string(
+                        _svg_ll67o,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
                   ],
-                ),
-                Pinned.fromPins(
-                  Pin(start: 45.5, end: 45.5),
-                  Pin(size: 210.2, middle: 0.3899),
-                  child:
-                      // Adobe XD layer: 'podiatry_FILL0_wght…' (shape)
-                      SvgPicture.string(
-                    _svg_ll67o,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ],
-            ),
+                )),
           ),
           Pinned.fromPins(
             Pin(size: 340, end: 18),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:todo/back_button.dart';
 import 'package:todo/main_selection.dart';
+import 'package:todo/speech_tts.dart';
 
 import 'main_menu.dart';
 
@@ -19,57 +20,12 @@ class ClothingSelection extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Pinned.fromPins(
-            Pin(size: 340, middle: 0.23),
-            Pin(size: 370, start: 20.9),
-            child: Stack(
-              children: <Widget>[
-                Stack(
-                  children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xffffffff),
-                        borderRadius: BorderRadius.circular(28.0),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color(0x29000000),
-                            offset: Offset(0, 4),
-                            blurRadius: 7,
-                          ),
-                        ],
-                      ),
-                    ),
-                    Pinned.fromPins(
-                      Pin(size: 195.0, middle: 0.540),
-                      Pin(size: 58.0, end: 20),
-                      child: const Text(
-                        'Cardigan',
-                        style: TextStyle(
-                          fontFamily: 'Roboto Mono',
-                          fontSize: 44,
-                          color: Color(0xff32325d),
-                        ),
-                        softWrap: false,
-                      ),
-                    ),
-                  ],
-                ),
-                Pinned.fromPins(
-                  Pin(start: 83.9, end: 82.9),
-                  Pin(size: 219.9, start: 61.6),
-                  child:
-                      // Adobe XD layer: 'water_full_FILL0_wg…' (shape)
-                      const Image(
-                          image: AssetImage('assets/images/cardigan.png')),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 340, middle: 0.605),
-            Pin(size: 370, start: 20),
-            child: Stack(
-              children: <Widget>[
-                Stack(
+              Pin(size: 340, middle: 0.23), Pin(size: 370, start: 20.9),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I want a cardigan.');
+                },
+                child: Stack(
                   children: <Widget>[
                     Stack(
                       children: <Widget>[
@@ -87,10 +43,10 @@ class ClothingSelection extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromPins(
-                          Pin(size: 79.0, middle: 0.4988),
+                          Pin(size: 195.0, middle: 0.540),
                           Pin(size: 58.0, end: 20),
                           child: const Text(
-                            'Top',
+                            'Cardigan',
                             style: TextStyle(
                               fontFamily: 'Roboto Mono',
                               fontSize: 44,
@@ -101,393 +57,459 @@ class ClothingSelection extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ],
-                ),
-                Pinned.fromPins(
-                  Pin(start: 39.6, end: 39.6),
-                  Pin(size: 228.4, middle: 0.3537),
-                  child: SvgPicture.string(
-                    _svg_oou3d,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 51.4, end: 53.5),
-                  Pin(size: 207.4, middle: 0.3737),
-                  child: SvgPicture.string(
-                    _svg_b7f9zb,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 340, middle: 0.23),
-            Pin(size: 370.0, end: 20),
-            child: Stack(
-              children: <Widget>[
-                Stack(
-                  children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xffffffff),
-                        borderRadius: BorderRadius.circular(28.0),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color(0x29000000),
-                            offset: Offset(0, 4),
-                            blurRadius: 7,
-                          ),
-                        ],
-                      ),
-                    ),
                     Pinned.fromPins(
-                      Pin(size: 211.0, middle: 0.640),
-                      Pin(size: 58.0, end: 20),
-                      child: const Text(
-                        'Pyjamas ',
-                        style: TextStyle(
-                          fontFamily: 'Roboto Mono',
-                          fontSize: 44,
-                          color: Color(0xff32325d),
-                        ),
-                        softWrap: false,
-                      ),
+                      Pin(start: 83.9, end: 82.9),
+                      Pin(size: 219.9, start: 61.6),
+                      child:
+                          // Adobe XD layer: 'water_full_FILL0_wg…' (shape)
+                          const Image(
+                              image: AssetImage('assets/images/cardigan.png')),
                     ),
                   ],
                 ),
-                Pinned.fromPins(
-                  Pin(size: 236.0, middle: 0.5423),
-                  Pin(size: 235.7, start: 60.8),
-                  child: Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(size: 45.0, middle: 0.6178),
-                        Pin(size: 45.0, start: 13.7),
-                        child:
-                            // Adobe XD layer: 'auto_awesome_black_…' (group)
-                            Stack(
+              )),
+          Pinned.fromPins(
+              Pin(size: 340, middle: 0.605), Pin(size: 370, start: 20),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I want a top.');
+                },
+                child: Stack(
+                  children: <Widget>[
+                    Stack(
+                      children: <Widget>[
+                        Stack(
                           children: <Widget>[
-                            Stack(
-                              children: <Widget>[
-                                Container(
-                                  decoration: const BoxDecoration(),
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(1.9),
-                              child: Stack(
-                                children: <Widget>[
-                                  Stack(
-                                    children: <Widget>[
-                                      Align(
-                                        alignment: Alignment.topRight,
-                                        child: SizedBox(
-                                          width: 15.0,
-                                          height: 15.0,
-                                          child: SvgPicture.string(
-                                            _svg_f10l65,
-                                            allowDrawingOutsideViewBox: true,
-                                          ),
-                                        ),
-                                      ),
-                                      Align(
-                                        alignment: Alignment.bottomRight,
-                                        child: SizedBox(
-                                          width: 15.0,
-                                          height: 15.0,
-                                          child: SvgPicture.string(
-                                            _svg_p7frvk,
-                                            allowDrawingOutsideViewBox: true,
-                                          ),
-                                        ),
-                                      ),
-                                      Pinned.fromPins(
-                                        Pin(size: 30.1, start: 0.0),
-                                        Pin(start: 5.6, end: 5.6),
-                                        child: SvgPicture.string(
-                                          _svg_yrjm7,
-                                          allowDrawingOutsideViewBox: true,
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                    ],
+                            Container(
+                              decoration: BoxDecoration(
+                                color: const Color(0xffffffff),
+                                borderRadius: BorderRadius.circular(28.0),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Color(0x29000000),
+                                    offset: Offset(0, 4),
+                                    blurRadius: 7,
                                   ),
                                 ],
                               ),
                             ),
+                            Pinned.fromPins(
+                              Pin(size: 79.0, middle: 0.4988),
+                              Pin(size: 58.0, end: 20),
+                              child: const Text(
+                                'Top',
+                                style: TextStyle(
+                                  fontFamily: 'Roboto Mono',
+                                  fontSize: 44,
+                                  color: Color(0xff32325d),
+                                ),
+                                softWrap: false,
+                              ),
+                            ),
                           ],
                         ),
+                      ],
+                    ),
+                    Pinned.fromPins(
+                      Pin(start: 39.6, end: 39.6),
+                      Pin(size: 228.4, middle: 0.3537),
+                      child: SvgPicture.string(
+                        _svg_oou3d,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
                       ),
-                      Pinned.fromPins(
-                        Pin(size: 86.0, end: 5.0),
-                        Pin(size: 84.0, start: 22.7),
-                        child:
-                            // Adobe XD layer: 'bedtime_black_24dp' (group)
-                            Stack(
-                          children: <Widget>[
-                            Stack(
+                    ),
+                    Pinned.fromPins(
+                      Pin(start: 51.4, end: 53.5),
+                      Pin(size: 207.4, middle: 0.3737),
+                      child: SvgPicture.string(
+                        _svg_b7f9zb,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ],
+                ),
+              )),
+          Pinned.fromPins(
+            Pin(size: 340, middle: 0.23),
+            Pin(size: 370.0, end: 20),
+            child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I want some pyjamas.');
+                },
+                child: Stack(
+                  children: <Widget>[
+                    Stack(
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                            color: const Color(0xffffffff),
+                            borderRadius: BorderRadius.circular(28.0),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Color(0x29000000),
+                                offset: Offset(0, 4),
+                                blurRadius: 7,
+                              ),
+                            ],
+                          ),
+                        ),
+                        Pinned.fromPins(
+                          Pin(size: 211.0, middle: 0.640),
+                          Pin(size: 58.0, end: 20),
+                          child: const Text(
+                            'Pyjamas ',
+                            style: TextStyle(
+                              fontFamily: 'Roboto Mono',
+                              fontSize: 44,
+                              color: Color(0xff32325d),
+                            ),
+                            softWrap: false,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Pinned.fromPins(
+                      Pin(size: 236.0, middle: 0.5423),
+                      Pin(size: 235.7, start: 60.8),
+                      child: Stack(
+                        children: <Widget>[
+                          Pinned.fromPins(
+                            Pin(size: 45.0, middle: 0.6178),
+                            Pin(size: 45.0, start: 13.7),
+                            child:
+                                // Adobe XD layer: 'auto_awesome_black_…' (group)
+                                Stack(
                               children: <Widget>[
-                                Container(
-                                  decoration: const BoxDecoration(),
+                                Stack(
+                                  children: <Widget>[
+                                    Container(
+                                      decoration: const BoxDecoration(),
+                                    ),
+                                  ],
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(1.9),
+                                  child: Stack(
+                                    children: <Widget>[
+                                      Stack(
+                                        children: <Widget>[
+                                          Align(
+                                            alignment: Alignment.topRight,
+                                            child: SizedBox(
+                                              width: 15.0,
+                                              height: 15.0,
+                                              child: SvgPicture.string(
+                                                _svg_f10l65,
+                                                allowDrawingOutsideViewBox:
+                                                    true,
+                                              ),
+                                            ),
+                                          ),
+                                          Align(
+                                            alignment: Alignment.bottomRight,
+                                            child: SizedBox(
+                                              width: 15.0,
+                                              height: 15.0,
+                                              child: SvgPicture.string(
+                                                _svg_p7frvk,
+                                                allowDrawingOutsideViewBox:
+                                                    true,
+                                              ),
+                                            ),
+                                          ),
+                                          Pinned.fromPins(
+                                            Pin(size: 30.1, start: 0.0),
+                                            Pin(start: 5.6, end: 5.6),
+                                            child: SvgPicture.string(
+                                              _svg_yrjm7,
+                                              allowDrawingOutsideViewBox: true,
+                                              fit: BoxFit.fill,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.fromLTRB(9.7, 5.9, 6.3, 5.6),
-                              child: Stack(
+                          ),
+                          Pinned.fromPins(
+                            Pin(size: 86.0, end: 5.0),
+                            Pin(size: 84.0, start: 22.7),
+                            child:
+                                // Adobe XD layer: 'bedtime_black_24dp' (group)
+                                Stack(
+                              children: <Widget>[
+                                Stack(
+                                  children: <Widget>[
+                                    Container(
+                                      decoration: const BoxDecoration(),
+                                    ),
+                                  ],
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(
+                                      9.7, 5.9, 6.3, 5.6),
+                                  child: Stack(
+                                    children: <Widget>[
+                                      SizedBox.expand(
+                                          child: SvgPicture.string(
+                                        _svg_clm1i7,
+                                        allowDrawingOutsideViewBox: true,
+                                        fit: BoxFit.fill,
+                                      )),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Align(
+                            alignment: Alignment.bottomLeft,
+                            child: SizedBox(
+                              width: 129.0,
+                              height: 129.0,
+                              child:
+                                  // Adobe XD layer: 'hotel_black_24dp' (group)
+                                  Stack(
                                 children: <Widget>[
                                   SizedBox.expand(
                                       child: SvgPicture.string(
-                                    _svg_clm1i7,
+                                    _svg_qucrd,
                                     allowDrawingOutsideViewBox: true,
                                     fit: BoxFit.fill,
                                   )),
+                                  Pinned.fromPins(
+                                    Pin(start: 5.4, end: 5.4),
+                                    Pin(size: 80.6, middle: 0.5556),
+                                    child: SvgPicture.string(
+                                      _svg_ud9,
+                                      allowDrawingOutsideViewBox: true,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
-                          ],
-                        ),
-                      ),
-                      Align(
-                        alignment: Alignment.bottomLeft,
-                        child: SizedBox(
-                          width: 129.0,
-                          height: 129.0,
-                          child:
-                              // Adobe XD layer: 'hotel_black_24dp' (group)
-                              Stack(
-                            children: <Widget>[
-                              SizedBox.expand(
-                                  child: SvgPicture.string(
-                                _svg_qucrd,
+                          ),
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: SizedBox(
+                              width: 128.0,
+                              height: 128.0,
+                              child:
+                                  // Adobe XD layer: 'window_FILL0_wght20…' (shape)
+                                  SvgPicture.string(
+                                _svg_zkdec,
                                 allowDrawingOutsideViewBox: true,
-                                fit: BoxFit.fill,
-                              )),
-                              Pinned.fromPins(
-                                Pin(start: 5.4, end: 5.4),
-                                Pin(size: 80.6, middle: 0.5556),
-                                child: SvgPicture.string(
-                                  _svg_ud9,
-                                  allowDrawingOutsideViewBox: true,
-                                  fit: BoxFit.fill,
-                                ),
                               ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Align(
-                        alignment: Alignment.topRight,
-                        child: SizedBox(
-                          width: 128.0,
-                          height: 128.0,
-                          child:
-                              // Adobe XD layer: 'window_FILL0_wght20…' (shape)
-                              SvgPicture.string(
-                            _svg_zkdec,
-                            allowDrawingOutsideViewBox: true,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 340, middle: 0.605),
-            Pin(size: 370, end: 20),
-            child: Stack(
-              children: <Widget>[
-                Stack(
-                  children: <Widget>[
-                    Stack(
-                      children: <Widget>[
-                        Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffffffff),
-                            borderRadius: BorderRadius.circular(28.0),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0x29000000),
-                                offset: Offset(0, 4),
-                                blurRadius: 7,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Pinned.fromPins(
-                          Pin(size: 132.0, middle: 0.4981),
-                          Pin(size: 58.0, end: 20),
-                          child: const Text(
-                            'Shoes',
-                            style: TextStyle(
-                              fontFamily: 'Roboto Mono',
-                              fontSize: 44,
-                              color: Color(0xff32325d),
                             ),
-                            softWrap: false,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                Pinned.fromPins(
-                  Pin(start: 45.5, end: 45.5),
-                  Pin(size: 210.2, middle: 0.3899),
-                  child:
-                      // Adobe XD layer: 'podiatry_FILL0_wght…' (shape)
-                      SvgPicture.string(
-                    _svg_eb915o,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 340, middle: 0.98),
-            Pin(size: 370, start: 20),
-            child: Stack(
-              children: <Widget>[
-                Stack(
-                  children: <Widget>[
-                    Stack(
-                      children: <Widget>[
-                        Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffffffff),
-                            borderRadius: BorderRadius.circular(28.0),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0x29000000),
-                                offset: Offset(0, 4),
-                                blurRadius: 7,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Pinned.fromPins(
-                          Pin(size: 211.0, middle: 0.628),
-                          Pin(size: 58.0, end: 20),
-                          child: const Text(
-                            'Trousers',
-                            style: TextStyle(
-                              fontFamily: 'Roboto Mono',
-                              fontSize: 44,
-                              color: Color(0xff32325d),
-                            ),
-                            softWrap: false,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                Pinned.fromPins(
-                  Pin(start: 49.7, end: 49.7),
-                  Pin(size: 219.9, start: 61.6),
-                  child:
-                      // Adobe XD layer: 'water_full_FILL0_wg…' (shape)
-                      const Image(
-                          image: AssetImage('assets/images/trousers.png')),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 340, middle: 0.979),
-            Pin(size: 370, end: 20),
-            child: Stack(
-              children: <Widget>[
-                Stack(
-                  children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xffffffff),
-                        borderRadius: BorderRadius.circular(28.0),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color(0x29000000),
-                            offset: Offset(0, 4),
-                            blurRadius: 7,
                           ),
                         ],
                       ),
                     ),
-                    Pinned.fromPins(
-                      Pin(size: 211.0, middle: 0.655),
-                      Pin(size: 58.0, end: 20),
-                      child: const Text(
-                        'Slippers',
-                        style: TextStyle(
-                          fontFamily: 'Roboto Mono',
-                          fontSize: 44,
-                          color: Color(0xff32325d),
+                  ],
+                )),
+          ),
+          Pinned.fromPins(
+              Pin(size: 340, middle: 0.605), Pin(size: 370, end: 20),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I want some shoes.');
+                },
+                child: Stack(
+                  children: <Widget>[
+                    Stack(
+                      children: <Widget>[
+                        Stack(
+                          children: <Widget>[
+                            Container(
+                              decoration: BoxDecoration(
+                                color: const Color(0xffffffff),
+                                borderRadius: BorderRadius.circular(28.0),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Color(0x29000000),
+                                    offset: Offset(0, 4),
+                                    blurRadius: 7,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Pinned.fromPins(
+                              Pin(size: 132.0, middle: 0.4981),
+                              Pin(size: 58.0, end: 20),
+                              child: const Text(
+                                'Shoes',
+                                style: TextStyle(
+                                  fontFamily: 'Roboto Mono',
+                                  fontSize: 44,
+                                  color: Color(0xff32325d),
+                                ),
+                                softWrap: false,
+                              ),
+                            ),
+                          ],
                         ),
-                        softWrap: false,
+                      ],
+                    ),
+                    Pinned.fromPins(
+                      Pin(start: 45.5, end: 45.5),
+                      Pin(size: 210.2, middle: 0.3899),
+                      child:
+                          // Adobe XD layer: 'podiatry_FILL0_wght…' (shape)
+                          SvgPicture.string(
+                        _svg_eb915o,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
                       ),
                     ),
                   ],
                 ),
-                Pinned.fromPins(
-                  Pin(size: 248.4, middle: 0.5002),
-                  Pin(size: 227.4, start: 61.2),
-                  child:
-                      // Adobe XD layer: 'slippers' (group)
-                      Stack(
-                    children: <Widget>[
-                      Pinned.fromPins(
-                        Pin(size: 117.4, start: 0.0),
-                        Pin(start: 0.5, end: 0.0),
-                        child: Stack(
+              )),
+          Pinned.fromPins(
+              Pin(size: 340, middle: 0.98), Pin(size: 370, start: 20),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I want some trousers.');
+                },
+                child: Stack(
+                  children: <Widget>[
+                    Stack(
+                      children: <Widget>[
+                        Stack(
                           children: <Widget>[
-                            Stack(
-                              children: <Widget>[
-                                SizedBox.expand(
-                                    child: SvgPicture.string(
-                                  _svg_xo6wp,
-                                  allowDrawingOutsideViewBox: true,
-                                  fit: BoxFit.fill,
-                                )),
-                              ],
+                            Container(
+                              decoration: BoxDecoration(
+                                color: const Color(0xffffffff),
+                                borderRadius: BorderRadius.circular(28.0),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Color(0x29000000),
+                                    offset: Offset(0, 4),
+                                    blurRadius: 7,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Pinned.fromPins(
+                              Pin(size: 211.0, middle: 0.628),
+                              Pin(size: 58.0, end: 20),
+                              child: const Text(
+                                'Trousers',
+                                style: TextStyle(
+                                  fontFamily: 'Roboto Mono',
+                                  fontSize: 44,
+                                  color: Color(0xff32325d),
+                                ),
+                                softWrap: false,
+                              ),
                             ),
                           ],
                         ),
-                      ),
-                      Pinned.fromPins(
-                        Pin(size: 120.8, end: 0.0),
-                        Pin(start: 0.0, end: 0.5),
-                        child: Stack(
-                          children: <Widget>[
-                            Stack(
-                              children: <Widget>[
-                                SizedBox.expand(
-                                    child: SvgPicture.string(
-                                  _svg_ojaenk,
-                                  allowDrawingOutsideViewBox: true,
-                                  fit: BoxFit.fill,
-                                )),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+                      ],
+                    ),
+                    Pinned.fromPins(
+                      Pin(start: 49.7, end: 49.7),
+                      Pin(size: 219.9, start: 61.6),
+                      child:
+                          // Adobe XD layer: 'water_full_FILL0_wg…' (shape)
+                          const Image(
+                              image: AssetImage('assets/images/trousers.png')),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-          ),
+              )),
+          Pinned.fromPins(
+              Pin(size: 340, middle: 0.979), Pin(size: 370, end: 20),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I want some slippers.');
+                },
+                child: Stack(
+                  children: <Widget>[
+                    Stack(
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                            color: const Color(0xffffffff),
+                            borderRadius: BorderRadius.circular(28.0),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Color(0x29000000),
+                                offset: Offset(0, 4),
+                                blurRadius: 7,
+                              ),
+                            ],
+                          ),
+                        ),
+                        Pinned.fromPins(
+                          Pin(size: 211.0, middle: 0.655),
+                          Pin(size: 58.0, end: 20),
+                          child: const Text(
+                            'Slippers',
+                            style: TextStyle(
+                              fontFamily: 'Roboto Mono',
+                              fontSize: 44,
+                              color: Color(0xff32325d),
+                            ),
+                            softWrap: false,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Pinned.fromPins(
+                      Pin(size: 248.4, middle: 0.5002),
+                      Pin(size: 227.4, start: 61.2),
+                      child:
+                          // Adobe XD layer: 'slippers' (group)
+                          Stack(
+                        children: <Widget>[
+                          Pinned.fromPins(
+                            Pin(size: 117.4, start: 0.0),
+                            Pin(start: 0.5, end: 0.0),
+                            child: Stack(
+                              children: <Widget>[
+                                Stack(
+                                  children: <Widget>[
+                                    SizedBox.expand(
+                                        child: SvgPicture.string(
+                                      _svg_xo6wp,
+                                      allowDrawingOutsideViewBox: true,
+                                      fit: BoxFit.fill,
+                                    )),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          Pinned.fromPins(
+                            Pin(size: 120.8, end: 0.0),
+                            Pin(start: 0.0, end: 0.5),
+                            child: Stack(
+                              children: <Widget>[
+                                Stack(
+                                  children: <Widget>[
+                                    SizedBox.expand(
+                                        child: SvgPicture.string(
+                                      _svg_ojaenk,
+                                      allowDrawingOutsideViewBox: true,
+                                      fit: BoxFit.fill,
+                                    )),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              )),
           Pinned.fromPins(
             Pin(size: 81.6, start: 55.0),
             Pin(size: 137.5, end: 40.0),

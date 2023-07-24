@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:todo/main_menu.dart';
 import 'package:todo/main_selection.dart';
+import 'package:todo/speech_tts.dart';
 
 import './back_button.dart';
 
@@ -81,127 +82,79 @@ class ToiletriesMenu extends StatelessWidget {
           //
           //
           Pinned.fromPins(
-            Pin(size: 340, middle: 0.23),
-            Pin(size: 370, start: 20.9),
-            child: Stack(
-              children: <Widget>[
-                Stack(
+              Pin(size: 340, middle: 0.23), Pin(size: 370, start: 20.9),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I need more shampoo.');
+                },
+                child: Stack(
                   children: <Widget>[
                     Stack(
                       children: <Widget>[
-                        Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffffffff),
-                            borderRadius: BorderRadius.circular(28.0),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0x29000000),
-                                offset: Offset(0, 4),
-                                blurRadius: 7,
+                        Stack(
+                          children: <Widget>[
+                            Container(
+                              decoration: BoxDecoration(
+                                color: const Color(0xffffffff),
+                                borderRadius: BorderRadius.circular(28.0),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Color(0x29000000),
+                                    offset: Offset(0, 4),
+                                    blurRadius: 7,
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        ),
-                        Pinned.fromPins(
-                          Pin(size: 220.0, middle: 0.55),
-                          Pin(size: 58.0, end: 20),
-                          child: const Text(
-                            'Shampoo',
-                            style: TextStyle(
-                              fontFamily: 'Roboto Mono',
-                              fontSize: 44,
-                              color: Color(0xff32325d),
                             ),
-                            softWrap: false,
-                          ),
+                            Pinned.fromPins(
+                              Pin(size: 220.0, middle: 0.55),
+                              Pin(size: 58.0, end: 20),
+                              child: const Text(
+                                'Shampoo',
+                                style: TextStyle(
+                                  fontFamily: 'Roboto Mono',
+                                  fontSize: 44,
+                                  color: Color(0xff32325d),
+                                ),
+                                softWrap: false,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                  ],
-                ),
-                Pinned.fromPins(
-                  Pin(size: 163.1, start: 44.2),
-                  Pin(size: 163.1, middle: 0.5035),
-                  child:
-                      // Adobe XD layer: 'face_FILL1_wght400_…' (shape)
-                      SvgPicture.string(
-                    _svg_ulzt4q,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 174.6, end: 30.5),
-                  Pin(size: 176.7, start: 35.2),
-                  child:
-                      // Adobe XD layer: 'sanitizer_FILL0_wgh…' (shape)
-                      SvgPicture.string(
-                    _svg_x5i3d4,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Pinned.fromPins(
-            Pin(size: 340, middle: 0.23),
-            Pin(size: 370.0, end: 20),
-            child: Stack(
-              children: <Widget>[
-                Stack(
-                  children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xffffffff),
-                        borderRadius: BorderRadius.circular(28.0),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color(0x29000000),
-                            offset: Offset(0, 4),
-                            blurRadius: 7,
-                          ),
-                        ],
+                    Pinned.fromPins(
+                      Pin(size: 163.1, start: 44.2),
+                      Pin(size: 163.1, middle: 0.5035),
+                      child:
+                          // Adobe XD layer: 'face_FILL1_wght400_…' (shape)
+                          SvgPicture.string(
+                        _svg_ulzt4q,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
                       ),
                     ),
                     Pinned.fromPins(
-                      Pin(start: 45.0, end: 30.8),
-                      Pin(size: 58.0, end: 20.3),
-                      child: const Text(
-                        'Toothpaste',
-                        style: TextStyle(
-                          fontFamily: 'Roboto Mono',
-                          fontSize: 44,
-                          color: Color(0xff32325d),
-                        ),
-                        softWrap: false,
+                      Pin(size: 174.6, end: 30.5),
+                      Pin(size: 176.7, start: 35.2),
+                      child:
+                          // Adobe XD layer: 'sanitizer_FILL0_wgh…' (shape)
+                          SvgPicture.string(
+                        _svg_x5i3d4,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
                       ),
                     ),
                   ],
                 ),
-                Pinned.fromPins(
-                  Pin(size: 251.2, middle: 0.4998),
-                  Pin(size: 251.2, start: 40.6),
-                  child: Stack(
-                    children: <Widget>[
-                      SizedBox.expand(
-                          child: SvgPicture.string(
-                        _svg_olo0x1,
-                        allowDrawingOutsideViewBox: true,
-                        fit: BoxFit.fill,
-                      )),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
+              )),
           Pinned.fromPins(
-            Pin(size: 340, middle: 0.605),
-            Pin(size: 370, start: 20),
-            child: Stack(
-              children: <Widget>[
-                Stack(
+              Pin(size: 340, middle: 0.23), Pin(size: 370.0, end: 20),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I need more toothpaste.');
+                },
+                child: Stack(
                   children: <Widget>[
                     Stack(
                       children: <Widget>[
@@ -219,10 +172,10 @@ class ToiletriesMenu extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromPins(
-                          Pin(start: 45.6, end: 37.2),
-                          Pin(size: 58.0, end: 20),
+                          Pin(start: 45.0, end: 30.8),
+                          Pin(size: 58.0, end: 20.3),
                           child: const Text(
-                            'Conditioner',
+                            'Toothpaste',
                             style: TextStyle(
                               fontFamily: 'Roboto Mono',
                               fontSize: 44,
@@ -233,117 +186,179 @@ class ToiletriesMenu extends StatelessWidget {
                         ),
                       ],
                     ),
+                    Pinned.fromPins(
+                      Pin(size: 251.2, middle: 0.4998),
+                      Pin(size: 251.2, start: 40.6),
+                      child: Stack(
+                        children: <Widget>[
+                          SizedBox.expand(
+                              child: SvgPicture.string(
+                            _svg_olo0x1,
+                            allowDrawingOutsideViewBox: true,
+                            fit: BoxFit.fill,
+                          )),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
-                Pinned.fromPins(
-                  Pin(size: 163.1, start: 44.3),
-                  Pin(size: 163.1, middle: 0.5035),
-                  child:
-                      // Adobe XD layer: 'face_FILL1_wght400_…' (shape)
-                      SvgPicture.string(
-                    _svg_jvg1y,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(size: 141.2, end: 35.6),
-                  Pin(size: 135.2, start: 2.0),
-                  child:
-                      // Adobe XD layer: 'water_bottle_FILL0_…' (shape)
-                      SvgPicture.string(
-                    _svg_tatkc,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Align(
-                  alignment: Alignment(-0.025, -0.304),
-                  child: SizedBox(
-                    width: 39.0,
-                    height: 52.0,
-                    child:
-                        // Adobe XD layer: 'sanitizer_FILL0_wgh…' (shape)
-                        SvgPicture.string(
-                      _svg_y92hn,
-                      allowDrawingOutsideViewBox: true,
+              )),
+          Pinned.fromPins(
+              Pin(size: 340, middle: 0.605), Pin(size: 370, start: 20),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I need more conditioner.');
+                },
+                child: Stack(
+                  children: <Widget>[
+                    Stack(
+                      children: <Widget>[
+                        Stack(
+                          children: <Widget>[
+                            Container(
+                              decoration: BoxDecoration(
+                                color: const Color(0xffffffff),
+                                borderRadius: BorderRadius.circular(28.0),
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: Color(0x29000000),
+                                    offset: Offset(0, 4),
+                                    blurRadius: 7,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Pinned.fromPins(
+                              Pin(start: 45.6, end: 37.2),
+                              Pin(size: 58.0, end: 20),
+                              child: const Text(
+                                'Conditioner',
+                                style: TextStyle(
+                                  fontFamily: 'Roboto Mono',
+                                  fontSize: 44,
+                                  color: Color(0xff32325d),
+                                ),
+                                softWrap: false,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment(-0.025, -0.304),
-                  child: SizedBox(
-                    width: 39.0,
-                    height: 52.0,
-                    child:
-                        // Adobe XD layer: 'sanitizer_FILL0_wgh…' (shape)
-                        SvgPicture.string(
-                      _svg_trakuh,
-                      allowDrawingOutsideViewBox: true,
+                    Pinned.fromPins(
+                      Pin(size: 163.1, start: 44.3),
+                      Pin(size: 163.1, middle: 0.5035),
+                      child:
+                          // Adobe XD layer: 'face_FILL1_wght400_…' (shape)
+                          SvgPicture.string(
+                        _svg_jvg1y,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
+                      ),
                     ),
-                  ),
+                    Pinned.fromPins(
+                      Pin(size: 141.2, end: 35.6),
+                      Pin(size: 135.2, start: 2.0),
+                      child:
+                          // Adobe XD layer: 'water_bottle_FILL0_…' (shape)
+                          SvgPicture.string(
+                        _svg_tatkc,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment(-0.025, -0.304),
+                      child: SizedBox(
+                        width: 39.0,
+                        height: 52.0,
+                        child:
+                            // Adobe XD layer: 'sanitizer_FILL0_wgh…' (shape)
+                            SvgPicture.string(
+                          _svg_y92hn,
+                          allowDrawingOutsideViewBox: true,
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment(-0.025, -0.304),
+                      child: SizedBox(
+                        width: 39.0,
+                        height: 52.0,
+                        child:
+                            // Adobe XD layer: 'sanitizer_FILL0_wgh…' (shape)
+                            SvgPicture.string(
+                          _svg_trakuh,
+                          allowDrawingOutsideViewBox: true,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-          ),
+              )),
           Pinned.fromPins(
             Pin(size: 340, middle: 0.98),
             Pin(size: 370, start: 20),
-            child: Stack(
-              children: <Widget>[
-                Stack(
-                  children: <Widget>[
-                    Stack(
-                      children: <Widget>[
-                        Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffffffff),
-                            borderRadius: BorderRadius.circular(28.0),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0x29000000),
-                                offset: Offset(0, 4),
-                                blurRadius: 7,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Pinned.fromPins(
-                          Pin(size: 238.0, middle: 0.5022),
-                          Pin(size: 58.0, end: 20),
-                          child: const Text(
-                            'Body Wash',
-                            style: TextStyle(
-                              fontFamily: 'Roboto Mono',
-                              fontSize: 44,
-                              color: Color(0xff32325d),
-                            ),
-                            softWrap: false,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                Pinned.fromPins(
-                  Pin(size: 198.1, middle: 0.494),
-                  Pin(size: 282.4, start: 20.2),
-                  child:
-                      // Adobe XD layer: 'noun-shampoo-3652130' (group)
-                      Stack(
+            child: GestureDetector(
+              onTap: () {
+                TextToSpeech.speak('I need more body wash.');
+              },
+              child: Stack(
+                children: <Widget>[
+                  Stack(
                     children: <Widget>[
-                      SizedBox.expand(
-                          child: SvgPicture.string(
-                        _svg_wn0s0p,
-                        allowDrawingOutsideViewBox: true,
-                        fit: BoxFit.fill,
-                      )),
+                      Stack(
+                        children: <Widget>[
+                          Container(
+                            decoration: BoxDecoration(
+                              color: const Color(0xffffffff),
+                              borderRadius: BorderRadius.circular(28.0),
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color(0x29000000),
+                                  offset: Offset(0, 4),
+                                  blurRadius: 7,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Pinned.fromPins(
+                            Pin(size: 238.0, middle: 0.5022),
+                            Pin(size: 58.0, end: 20),
+                            child: const Text(
+                              'Body Wash',
+                              style: TextStyle(
+                                fontFamily: 'Roboto Mono',
+                                fontSize: 44,
+                                color: Color(0xff32325d),
+                              ),
+                              softWrap: false,
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
-                ),
-              ],
+                  Pinned.fromPins(
+                    Pin(size: 198.1, middle: 0.494),
+                    Pin(size: 282.4, start: 20.2),
+                    child:
+                        // Adobe XD layer: 'noun-shampoo-3652130' (group)
+                        Stack(
+                      children: <Widget>[
+                        SizedBox.expand(
+                            child: SvgPicture.string(
+                          _svg_wn0s0p,
+                          allowDrawingOutsideViewBox: true,
+                          fit: BoxFit.fill,
+                        )),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
+          )
         ],
       ),
     );

@@ -3,6 +3,7 @@ import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:todo/main_selection.dart';
+import 'package:todo/speech_tts.dart';
 
 import './back_button.dart';
 import 'main_menu.dart';
@@ -15,54 +16,56 @@ class TeaMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xfff7f7fa),
-      body: Stack(
-        children: <Widget>[
+        backgroundColor: const Color(0xfff7f7fa),
+        body: Stack(children: <Widget>[
           Pinned.fromPins(
-            Pin(size: 500.0, middle: 0.290),
-            Pin(size: 580.0, middle: 0.5),
-            child:
-                // Adobe XD layer: 'Widget' (group)
-                Stack(
-              children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(
-                    color: const Color(0xffffffff),
-                    borderRadius: BorderRadius.circular(28.0),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Color(0x29000000),
-                        offset: Offset(0, 4),
-                        blurRadius: 7,
+              Pin(size: 500.0, middle: 0.290), Pin(size: 580.0, middle: 0.5),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I want to have my tea in my room please');
+                },
+                child:
+                    // Adobe XD layer: 'Widget' (group)
+                    Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xffffffff),
+                        borderRadius: BorderRadius.circular(28.0),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0x29000000),
+                            offset: Offset(0, 4),
+                            blurRadius: 7,
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                ),
-                Pinned.fromPins(
-                  Pin(start: 44.0, end: 43.0),
-                  Pin(size: 92.0, end: 20.0),
-                  child: const Text(
-                    'Eat In Room',
-                    style: TextStyle(
-                      fontFamily: 'Roboto Mono',
-                      fontSize: 70,
-                      color: Color(0xff32325d),
                     ),
-                    softWrap: false,
-                  ),
+                    Pinned.fromPins(
+                      Pin(start: 44.0, end: 43.0),
+                      Pin(size: 92.0, end: 20.0),
+                      child: const Text(
+                        'Eat In Room',
+                        style: TextStyle(
+                          fontFamily: 'Roboto Mono',
+                          fontSize: 70,
+                          color: Color(0xff32325d),
+                        ),
+                        softWrap: false,
+                      ),
+                    ),
+                    Pinned.fromPins(
+                      Pin(size: 330.5, middle: 0.5),
+                      Pin(size: 330.0, start: 80.0),
+                      child: SvgPicture.string(
+                        _svg_fr9apc,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ],
                 ),
-                Pinned.fromPins(
-                  Pin(size: 330.5, middle: 0.5),
-                  Pin(size: 330.0, start: 80.0),
-                  child: SvgPicture.string(
-                    _svg_fr9apc,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ],
-            ),
-          ),
+              )),
           Pinned.fromPins(
             Pin(size: 180.0, start: 15.7),
             Pin(size: 246.5, middle: 0.22),
@@ -80,67 +83,70 @@ class TeaMenu extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 500.0, end: 30.0),
-            Pin(size: 580.0, middle: 0.5),
-            child: Stack(
-              children: <Widget>[
-                Stack(
+              Pin(size: 500.0, end: 30.0), Pin(size: 580.0, middle: 0.5),
+              child: GestureDetector(
+                onTap: () {
+                  TextToSpeech.speak('I want to eat in the dining room please');
+                },
+                child: Stack(
                   children: <Widget>[
-                    Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xffffffff),
-                        borderRadius: BorderRadius.circular(28.0),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color(0x29000000),
-                            offset: Offset(0, 4),
-                            blurRadius: 7,
+                    Stack(
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                            color: const Color(0xffffffff),
+                            borderRadius: BorderRadius.circular(28.0),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Color(0x29000000),
+                                offset: Offset(0, 4),
+                                blurRadius: 7,
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
+                        ),
+                        Pinned.fromPins(
+                          Pin(size: 400.0, middle: 0.95),
+                          Pin(size: 81.0, end: 71.0),
+                          child: const Text(
+                            'Eat In The',
+                            style: TextStyle(
+                              fontFamily: 'Roboto Mono',
+                              fontSize: 61,
+                              color: Color(0xff32325d),
+                            ),
+                            softWrap: false,
+                          ),
+                        ),
+                        Pinned.fromPins(
+                          Pin(size: 400.0, middle: 0.6),
+                          Pin(size: 81.0, end: 12.0),
+                          child: const Text(
+                            'Dining Room',
+                            style: TextStyle(
+                              fontFamily: 'Roboto Mono',
+                              fontSize: 61,
+                              color: Color(0xff32325d),
+                            ),
+                            softWrap: false,
+                          ),
+                        ),
+                      ],
                     ),
                     Pinned.fromPins(
-                      Pin(size: 400.0, middle: 0.95),
-                      Pin(size: 81.0, end: 71.0),
-                      child: const Text(
-                        'Eat In The',
-                        style: TextStyle(
-                          fontFamily: 'Roboto Mono',
-                          fontSize: 61,
-                          color: Color(0xff32325d),
-                        ),
-                        softWrap: false,
-                      ),
-                    ),
-                    Pinned.fromPins(
-                      Pin(size: 400.0, middle: 0.6),
-                      Pin(size: 81.0, end: 12.0),
-                      child: const Text(
-                        'Dining Room',
-                        style: TextStyle(
-                          fontFamily: 'Roboto Mono',
-                          fontSize: 61,
-                          color: Color(0xff32325d),
-                        ),
-                        softWrap: false,
+                      Pin(size: 247.5, middle: 0.4992),
+                      Pin(size: 330.0, start: 71.0),
+                      child:
+                          // Adobe XD layer: 'restaurant_FILL0_wg…' (shape)
+                          SvgPicture.string(
+                        _svg_zca30,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
                       ),
                     ),
                   ],
                 ),
-                Pinned.fromPins(
-                  Pin(size: 247.5, middle: 0.4992),
-                  Pin(size: 330.0, start: 71.0),
-                  child:
-                      // Adobe XD layer: 'restaurant_FILL0_wg…' (shape)
-                      SvgPicture.string(
-                    _svg_zca30,
-                    allowDrawingOutsideViewBox: true,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ],
-            ),
-          ),
+              )),
           Pinned.fromPins(
             Pin(size: 81.6, start: 55.0),
             Pin(size: 137.5, end: 40.0),
@@ -184,10 +190,8 @@ class TeaMenu extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ],
-      ),
-    );
+          )
+        ]));
   }
 }
 
