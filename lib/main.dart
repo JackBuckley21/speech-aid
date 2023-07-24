@@ -19,17 +19,50 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Wakelock.enable();
+
     return MaterialApp(
-      title: 'XD to Flutter example',
+      title: 'Speech Aid',
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
 
       // Home is an artboard exported from Adobe XD
-      home: const MainMenu(
-        key: null,
-        // This assigns a handler to a "Tap Callback Name" that was defined
-        // on the "Latest Adventures" card in the XD file:
+      home: FutureBuilder(
+        future: Future.delayed(const Duration(seconds: 6)),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const LoadingScreen();
+          } else {
+            return const MainMenu();
+          }
+        },
+      ),
+    );
+  }
+}
+
+class LoadingScreen extends StatelessWidget {
+  const LoadingScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/images/load.png'),
+            const SizedBox(height: 10),
+            const Text(
+              'Hello Joan',
+              style: TextStyle(
+                color: Color(0xffd84f99),
+                fontFamily: 'Roboto Mono',
+                fontSize: 44,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

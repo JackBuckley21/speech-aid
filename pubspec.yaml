@@ -65,6 +65,7 @@ flutter:
   assets:
     - assets/images/cardigan.png
     - assets/images/trousers.png
+    - assets/images/load.png
 
 
   # To add custom fonts to your application, add a fonts section here,
