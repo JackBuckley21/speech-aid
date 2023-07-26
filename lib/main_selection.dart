@@ -2,12 +2,13 @@ import 'package:adobe_xd/page_link.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:todo/Toiletries_Menu.dart';
-import 'package:todo/back_button.dart';
-import 'package:todo/home_button.dart';
-import 'package:todo/self_care_selection_menu.dart';
-import 'package:todo/speech_tts.dart';
-import 'package:todo/tea_menu.dart';
+import 'package:speechAid/Toiletries_Menu.dart';
+import 'package:speechAid/back_button.dart';
+import 'package:speechAid/home_button.dart';
+import 'package:speechAid/self_care_selection_menu.dart';
+import 'package:speechAid/speech_tts.dart';
+import 'package:speechAid/tea_menu.dart';
+import 'package:speechAid/xd_colors.dart';
 
 import 'clothing_selection.dart';
 import 'main_menu.dart';
@@ -55,7 +56,7 @@ class MainSelection extends StatelessWidget {
                             style: TextStyle(
                               fontFamily: 'Roboto Mono',
                               fontSize: 44,
-                              color: Color(0xff32325d),
+                              color: XDColors.text,
                             ),
                             softWrap: false,
                           ),
@@ -113,7 +114,7 @@ class MainSelection extends StatelessWidget {
                           style: TextStyle(
                             fontFamily: 'Roboto Mono',
                             fontSize: 44,
-                            color: Color(0xff32325d),
+                            color: XDColors.text,
                           ),
                           softWrap: false,
                         ),
@@ -171,7 +172,7 @@ class MainSelection extends StatelessWidget {
                           style: TextStyle(
                             fontFamily: 'Roboto Mono',
                             fontSize: 44,
-                            color: Color(0xff32325d),
+                            color: XDColors.text,
                           ),
                           softWrap: false,
                         ),
@@ -227,7 +228,7 @@ class MainSelection extends StatelessWidget {
                           style: TextStyle(
                             fontFamily: 'Roboto Mono',
                             fontSize: 44,
-                            color: Color(0xff32325d),
+                            color: XDColors.text,
                           ),
                           softWrap: false,
                         ),
@@ -279,7 +280,7 @@ class MainSelection extends StatelessWidget {
                                 style: TextStyle(
                                   fontFamily: 'Roboto Mono',
                                   fontSize: 44,
-                                  color: Color(0xff32325d),
+                                  color: XDColors.text,
                                 ),
                                 softWrap: false,
                               ),
@@ -338,7 +339,7 @@ class MainSelection extends StatelessWidget {
                           style: TextStyle(
                             fontFamily: 'Roboto Mono',
                             fontSize: 44,
-                            color: Color(0xff32325d),
+                            color: XDColors.text,
                           ),
                           softWrap: false,
                         ),

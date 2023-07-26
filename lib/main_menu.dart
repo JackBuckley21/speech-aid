@@ -2,6 +2,7 @@ import 'package:adobe_xd/page_link.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:speechAid/xd_colors.dart';
 
 import 'main_selection.dart';
 import 'needs_menu.dart';
@@ -54,7 +55,7 @@ class MainMenu extends StatelessWidget {
                       style: TextStyle(
                         fontFamily: 'Roboto Mono',
                         fontSize: 70,
-                        color: Color(0xff32325d),
+                        color: XDColors.text,
                       ),
                       softWrap: false,
                     ),
@@ -115,7 +116,7 @@ class MainMenu extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Roboto Mono',
                   fontSize: 70,
-                  color: Color(0xff32325d),
+                  color: XDColors.text,
                 ),
                 softWrap: false,
               ),

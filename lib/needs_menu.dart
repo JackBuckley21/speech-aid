@@ -2,8 +2,9 @@ import 'package:adobe_xd/page_link.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:todo/main_menu.dart';
-import 'package:todo/speech_tts.dart';
+import 'package:speechAid/main_menu.dart';
+import 'package:speechAid/speech_tts.dart';
+import 'package:speechAid/xd_colors.dart';
 
 import 'back_button.dart';
 
@@ -47,7 +48,7 @@ class NeedMenu extends StatelessWidget {
                         style: TextStyle(
                           fontFamily: 'Roboto Mono',
                           fontSize: 70,
-                          color: Color(0xff32325d),
+                          color: XDColors.text,
                         ),
                         softWrap: false,
                       ),
@@ -95,7 +96,7 @@ class NeedMenu extends StatelessWidget {
                             style: TextStyle(
                               fontFamily: 'Roboto Mono',
                               fontSize: 61,
-                              color: Color(0xff32325d),
+                              color: XDColors.text,
                             ),
                             softWrap: false,
                           ),
