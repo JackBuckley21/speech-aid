@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
 
       // Home is an artboard exported from Adobe XD
       home: FutureBuilder(
-        future: Future.delayed(const Duration(seconds: 6)),
+        future: Future.delayed(const Duration(seconds: 4)),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const LoadingScreen();

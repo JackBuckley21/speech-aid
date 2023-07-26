@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:todo/Toiletries_Menu.dart';
 import 'package:todo/back_button.dart';
+import 'package:todo/home_button.dart';
 import 'package:todo/self_care_selection_menu.dart';
 import 'package:todo/speech_tts.dart';
 import 'package:todo/tea_menu.dart';
@@ -358,46 +359,9 @@ class MainSelection extends StatelessWidget {
           Pinned.fromPins(
             Pin(size: 81.6, start: 55.0),
             Pin(size: 137.5, end: 40.0),
-            child: PageLink(
-              links: [
-                PageLinkInfo(
-                  ease: Curves.easeInOut,
-                  duration: 0.3,
-                  pageBuilder: () => const MainMenu(),
-                ),
-              ],
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromPins(
-                    Pin(start: 0.0, end: 0.0),
-                    Pin(size: 91.8, start: 0.0),
-                    child:
-                        // Adobe XD layer: 'home_FILL0_wght400_…' (shape)
-                        SvgPicture.string(
-                      _svg_e95y6w,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                  const Align(
-                    alignment: Alignment.bottomCenter,
-                    child: SizedBox(
-                      width: 72.0,
-                      height: 35.0,
-                      child: Text(
-                        'Home',
-                        style: TextStyle(
-                          fontFamily: 'Roboto Mono',
-                          fontSize: 25,
-                          color: Color(0xff32325d),
-                        ),
-                        softWrap: false,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            child:
+                // Adobe XD layer: 'Back Button' (component)
+                const HomeButton(),
           ),
           Pinned.fromPins(
             Pin(size: 180.0, start: 15.7),
@@ -408,7 +372,7 @@ class MainSelection extends StatelessWidget {
               links: [
                 PageLinkInfo(
                   ease: Curves.easeInOutExpo,
-                  duration: 0.3,
+                  duration: 0.4,
                   pageBuilder: () => const MainMenu(),
                 ),
               ],

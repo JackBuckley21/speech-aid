@@ -1,12 +1,12 @@
 import 'package:adobe_xd/page_link.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:todo/main_menu.dart';
-import 'package:todo/main_selection.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:todo/speech_tts.dart';
 
 import './back_button.dart';
+import 'home_button.dart';
+import 'main_selection.dart';
 
 class ToiletriesMenu extends StatelessWidget {
   ToiletriesMenu({
@@ -38,44 +38,9 @@ class ToiletriesMenu extends StatelessWidget {
           Pinned.fromPins(
             Pin(size: 81.6, start: 55.0),
             Pin(size: 137.5, end: 40.0),
-            child: PageLink(
-              links: [
-                PageLinkInfo(
-                  ease: Curves.easeInOut,
-                  duration: 0.3,
-                  pageBuilder: () => const MainMenu(),
-                ),
-              ],
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromPins(
-                    Pin(start: 0.0, end: 0.0),
-                    Pin(size: 91.8, start: 0.0),
-                    child: SvgPicture.string(
-                      _svg_e95y6w,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                  const Align(
-                    alignment: Alignment.bottomCenter,
-                    child: SizedBox(
-                      width: 72.0,
-                      height: 35.0,
-                      child: Text(
-                        'Home',
-                        style: TextStyle(
-                          fontFamily: 'Roboto Mono',
-                          fontSize: 25,
-                          color: Color(0xff32325d),
-                        ),
-                        softWrap: false,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            child:
+                // Adobe XD layer: 'Back Button' (component)
+                const HomeButton(),
           ),
 
           //

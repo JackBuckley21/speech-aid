@@ -3,8 +3,8 @@ import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import './main_selection.dart';
-import './needs_menu.dart';
+import 'main_selection.dart';
+import 'needs_menu.dart';
 
 class MainMenu extends StatelessWidget {
   const MainMenu({
@@ -28,7 +28,7 @@ class MainMenu extends StatelessWidget {
                 PageLinkInfo(
                   ease: Curves.easeInOut,
                   duration: 0.24,
-                  pageBuilder: () => MainSelection(),
+                  pageBuilder: () => const MainSelection(),
                 ),
               ],
               child: Stack(
@@ -74,6 +74,7 @@ class MainMenu extends StatelessWidget {
               ),
             ),
           ),
+          // )
         ],
       ),
     );
@@ -87,7 +88,7 @@ class MainMenu extends StatelessWidget {
         links: [
           PageLinkInfo(
             ease: Curves.easeInOutExpo,
-            duration: 0.2,
+            duration: 0.3,
             pageBuilder: () => NeedMenu(),
           ),
         ],

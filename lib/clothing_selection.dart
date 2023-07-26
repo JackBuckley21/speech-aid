@@ -6,7 +6,7 @@ import 'package:todo/back_button.dart';
 import 'package:todo/main_selection.dart';
 import 'package:todo/speech_tts.dart';
 
-import 'main_menu.dart';
+import 'home_button.dart';
 
 class ClothingSelection extends StatelessWidget {
   const ClothingSelection({
@@ -513,46 +513,9 @@ class ClothingSelection extends StatelessWidget {
           Pinned.fromPins(
             Pin(size: 81.6, start: 55.0),
             Pin(size: 137.5, end: 40.0),
-            child: PageLink(
-              links: [
-                PageLinkInfo(
-                  ease: Curves.easeInOut,
-                  duration: 0.3,
-                  pageBuilder: () => const MainMenu(),
-                ),
-              ],
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromPins(
-                    Pin(start: 0.0, end: 0.0),
-                    Pin(size: 91.8, start: 0.0),
-                    child:
-                        // Adobe XD layer: 'home_FILL0_wght400_…' (shape)
-                        SvgPicture.string(
-                      _svg_e95y6w,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                  const Align(
-                    alignment: Alignment.bottomCenter,
-                    child: SizedBox(
-                      width: 72.0,
-                      height: 35.0,
-                      child: Text(
-                        'Home',
-                        style: TextStyle(
-                          fontFamily: 'Roboto Mono',
-                          fontSize: 25,
-                          color: Color(0xff32325d),
-                        ),
-                        softWrap: false,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            child:
+                // Adobe XD layer: 'Home Button' (component)
+                const HomeButton(),
           ),
           Pinned.fromPins(
             Pin(size: 180.0, start: 15.7),
@@ -576,8 +539,6 @@ class ClothingSelection extends StatelessWidget {
   }
 }
 
-const String _svg_e95y6w =
-    '<svg viewBox="1789.3 1042.5 81.6 91.8" ><path transform="translate(1629.29, 1882.53)" d="M 167.6505279541016 -755.8441162109375 L 186.77685546875 -755.8441162109375 L 186.77685546875 -787.7213134765625 L 214.8288421630859 -787.7213134765625 L 214.8288421630859 -755.8441162109375 L 233.9551544189453 -755.8441162109375 L 233.9551544189453 -805.5726318359375 L 200.8028411865234 -830.4368896484375 L 167.6505279541016 -805.5726318359375 L 167.6505279541016 -755.8441162109375 Z M 160 -748.193603515625 L 160 -809.39794921875 L 200.8028411865234 -840 L 241.6056976318359 -809.39794921875 L 241.6056976318359 -748.193603515625 L 207.1782989501953 -748.193603515625 L 207.1782989501953 -780.07080078125 L 194.4274139404297 -780.07080078125 L 194.4274139404297 -748.193603515625 L 160 -748.193603515625 Z M 200.8028411865234 -793.2042236328125 Z" fill="#d84f99" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
 const String _svg_oou3d =
     '<svg viewBox="817.2 199.8 285.6 228.4" ><path transform="translate(817.22, 199.79)" d="M 281.6217651367188 43.05183029174805 L 194.7596893310547 0 C 185.7924194335938 12.40249633789062 165.9394989013672 21.05747604370117 142.7851867675781 21.05747604370117 C 119.6308822631836 21.05747604370117 99.77796936035156 12.40249633789062 90.81069183349609 0 L 3.948606729507446 43.05183029174805 C 0.4241564869880676 44.83636474609375 -1.003469109535217 49.11923980712891 0.7364493608474731 52.6436882019043 L 26.25525283813477 103.7259140014648 C 28.0397834777832 107.2503662109375 32.32266235351562 108.6779861450195 35.84711074829102 106.9380722045898 L 61.09823989868164 94.58018493652344 C 65.82724761962891 92.26029205322266 71.35929870605469 95.69551849365234 71.35929870605469 101.0045013427734 L 71.35929870605469 214.1438293457031 C 71.35929870605469 222.0403747558594 77.73899841308594 228.4200744628906 85.63555145263672 228.4200744628906 L 199.8456115722656 228.4200744628906 C 207.7421417236328 228.4200744628906 214.1218566894531 222.0403747558594 214.1218566894531 214.1438293457031 L 214.1218566894531 100.9598846435547 C 214.1218566894531 95.69551849365234 219.6539154052734 92.21568298339844 224.3829193115234 94.53557586669922 L 249.634033203125 106.8934555053711 C 253.1584930419922 108.6779861450195 257.4413757324219 107.250358581543 259.2258911132812 103.6812973022461 L 284.7893371582031 52.6436882019043 C 286.5738525390625 49.11923980712891 285.146240234375 44.791748046875 281.6217956542969 43.05183029174805 Z" fill="#d84f99" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
 const String _svg_b7f9zb =

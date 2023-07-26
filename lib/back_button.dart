@@ -5,24 +5,25 @@ class XDBackButton extends StatelessWidget {
   XDBackButton({
     Key? key,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 62.5),
+          padding: const EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 62.5),
           child: Stack(
             children: <Widget>[
               Stack(
                 children: <Widget>[
                   Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xffffffff),
+                    decoration: const BoxDecoration(
+                      color: Color(0xffffffff),
                       borderRadius:
                           BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
                       boxShadow: [
                         BoxShadow(
-                          color: const Color(0x29000000),
+                          color: Color(0x29000000),
                           offset: Offset(0, 3),
                           blurRadius: 6,
                         ),
@@ -46,7 +47,7 @@ class XDBackButton extends StatelessWidget {
             ],
           ),
         ),
-        Align(
+        const Align(
           alignment: Alignment.bottomCenter,
           child: SizedBox(
             width: 91.0,
@@ -56,7 +57,7 @@ class XDBackButton extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'Roboto Mono',
                 fontSize: 38,
-                color: const Color(0xff32325d),
+                color: Color(0xff32325d),
               ),
               softWrap: false,
             ),
