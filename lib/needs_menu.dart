@@ -2,6 +2,7 @@ import 'package:adobe_xd/page_link.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:speechAid/Toilet_time.dart';
 import 'package:speechAid/main_menu.dart';
 import 'package:speechAid/speech_tts.dart';
 import 'package:speechAid/xd_colors.dart';
@@ -132,6 +133,13 @@ class NeedMenu extends StatelessWidget {
               ],
               child: XDBackButton(),
             ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 81.6, start: 55.0),
+            Pin(size: 137.5, end: 40.0),
+            child:
+                // Adobe XD layer: 'Back Button' (component)
+                const ToiletTime(),
           ),
         ],
       ),

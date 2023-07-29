@@ -90,7 +90,7 @@ class MainMenu extends StatelessWidget {
           PageLinkInfo(
             ease: Curves.easeInOutExpo,
             duration: 0.3,
-            pageBuilder: () => NeedMenu(),
+            pageBuilder: () => const NeedMenu(),
           ),
         ],
         child: Stack(
