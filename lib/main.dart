@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wakelock/wakelock.dart';
-
-import 'main_menu.dart';
+import 'Home_Speech_Aid/main_menu.dart';
 
 Future<void> main() async {
   runApp(const MyApp());

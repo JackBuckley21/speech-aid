@@ -2,9 +2,8 @@ import 'package:adobe_xd/page_link.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:speechAid/speech_tts.dart';
-import 'package:speechAid/xd_colors.dart';
-
+import 'package:speechAid/Home_Speech_Aid/speech_tts.dart';
+import 'package:speechAid/Home_Speech_Aid/xd_colors.dart';
 import './back_button.dart';
 import 'home_button.dart';
 import 'main_selection.dart';
@@ -21,7 +20,7 @@ class SelfCareMenu extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Pinned.fromPins(
-              Pin(size: 340, middle: 0.605), Pin(size: 370, start: 20),
+             Pin(size: 340, middle: 0.399), Pin(size: 370, start: 20),
               child: GestureDetector(
                 onTap: () {
                   TextToSpeech.speak(
@@ -89,7 +88,7 @@ class SelfCareMenu extends StatelessWidget {
                 ),
               )),
           Pinned.fromPins(
-              Pin(size: 340, middle: 0.23), Pin(size: 370.0, end: 20),
+             Pin(size: 340, start: 20), Pin(size: 370.0, end: 20),
               child: GestureDetector(
                 onTap: () {
                   TextToSpeech.speak('Can you cut my finger nails please?.');
@@ -169,7 +168,7 @@ class SelfCareMenu extends StatelessWidget {
                 ),
               )),
           Pinned.fromPins(
-              Pin(size: 340, middle: 0.605), Pin(size: 370, end: 20),
+              Pin(size: 340, middle: 0.399), Pin(size: 370, end: 20),
               child: GestureDetector(
                 onTap: () {
                   TextToSpeech.speak('Can you cut my toe nails please?');
@@ -247,7 +246,7 @@ class SelfCareMenu extends StatelessWidget {
                 ),
               )),
           Pinned.fromPins(
-              Pin(size: 340, middle: 0.23), Pin(size: 370, start: 20.9),
+                Pin(size: 340, start: 20), Pin(size: 370, start: 20.9),
               child: GestureDetector(
                 onTap: () {
                   TextToSpeech.speak('I would like to comb my hair.');
@@ -323,7 +322,7 @@ class SelfCareMenu extends StatelessWidget {
                 ),
               )),
           Pinned.fromPins(
-              Pin(size: 340, middle: 0.98), Pin(size: 370, start: 20),
+              Pin(size: 340, end: 210), Pin(size: 370, start: 20),
               child: GestureDetector(
                 onTapUp: (details) {
                   TextToSpeech.speak('Can you give me a shave please');
@@ -509,14 +508,14 @@ class SelfCareMenu extends StatelessWidget {
                 ),
               )),
           Pinned.fromPins(
-            Pin(size: 81.6, start: 55.0),
+            Pin(size: 81.6, end: 50.0),
             Pin(size: 137.5, end: 40.0),
             child:
                 // Adobe XD layer: 'Back Button' (component)
                 const HomeButton(),
           ),
           Pinned.fromPins(
-            Pin(size: 180.0, start: 15.7),
+            Pin(size: 180.0, end: 10),
             Pin(size: 246.5, middle: 0.22),
             child:
                 // Adobe XD layer: 'Back Button' (component)

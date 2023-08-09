@@ -2,8 +2,7 @@ import 'package:adobe_xd/page_link.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:speechAid/xd_colors.dart';
-
+import 'package:speechAid/Home_Speech_Aid/xd_colors.dart';
 import 'main_menu.dart';
 
 class HomeButton extends StatelessWidget {
@@ -16,7 +15,7 @@ class HomeButton extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Pinned.fromPins(
-            Pin(size: 81.6, start: 55.0), Pin(size: 137.5, end: 40.0),
+            Pin(size: 81.6, end: 50.0), Pin(size: 137.5, end: 40.0),
             child: PageLink(
                 links: [
                   PageLinkInfo(
