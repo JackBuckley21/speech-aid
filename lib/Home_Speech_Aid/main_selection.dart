@@ -2,15 +2,16 @@ import 'package:adobe_xd/page_link.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:speechAid/Toiletries_Menu.dart';
-import 'package:speechAid/back_button.dart';
-import 'package:speechAid/home_button.dart';
-import 'package:speechAid/self_care_selection_menu.dart';
-import 'package:speechAid/speech_tts.dart';
-import 'package:speechAid/tea_menu.dart';
-import 'package:speechAid/xd_colors.dart';
+import 'package:speechAid/Home_Speech_Aid/Toiletries_Menu.dart';
+import 'package:speechAid/Home_Speech_Aid/drink_menu.dart';
+import 'package:speechAid/Home_Speech_Aid/self_care_selection_menu.dart';
+import 'package:speechAid/Home_Speech_Aid/speech_tts.dart';
+import 'package:speechAid/Home_Speech_Aid/tea_menu.dart';
+import 'package:speechAid/Home_Speech_Aid/xd_colors.dart';
 
+import 'back_button.dart';
 import 'clothing_selection.dart';
+import 'home_button.dart';
 import 'main_menu.dart';
 
 class MainSelection extends StatelessWidget {
@@ -25,60 +26,62 @@ class MainSelection extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Pinned.fromPins(
-            Pin(size: 340, middle: 0.23),
-            Pin(size: 370, start: 20.9),
-            child: GestureDetector(
-                onTap: () {
-                  TextToSpeech.speak('I want a drink.');
-                },
-                child: Stack(
-                  children: <Widget>[
-                    Stack(
-                      children: <Widget>[
-                        Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xffffffff),
-                            borderRadius: BorderRadius.circular(28.0),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0x29000000),
-                                offset: Offset(0, 4),
-                                blurRadius: 7,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Pinned.fromPins(
-                          Pin(size: 185.0, middle: 0.59),
-                          Pin(size: 58.0, end: 20),
-                          child: const Text(
-                            'A Drink',
-                            style: TextStyle(
-                              fontFamily: 'Roboto Mono',
-                              fontSize: 44,
-                              color: XDColors.text,
-                            ),
-                            softWrap: false,
-                          ),
-                        ),
-                      ],
+              Pin(size: 340, start: 20), Pin(size: 370, start: 20.9),
+              child: PageLink(
+                  links: [
+                    PageLinkInfo(
+                      ease: Curves.easeInOutExpo,
+                      duration: 0.3,
+                      pageBuilder: () => const DrinkMenu(),
                     ),
-                    Pinned.fromPins(Pin(start: 83.9, end: 82.9),
-                        Pin(size: 219.9, start: 61.6),
-                        child: GestureDetector(
-                          child:
-                              // Adobe XD layer: 'water_full_FILL0_wg…' (shape)
-                              SvgPicture.string(
-                            _svg_h4mzdo,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ))
                   ],
-                )),
-          ),
+                  child: Stack(
+                    children: <Widget>[
+                      Stack(
+                        children: <Widget>[
+                          Container(
+                            decoration: BoxDecoration(
+                              color: const Color(0xffffffff),
+                              borderRadius: BorderRadius.circular(28.0),
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color(0x29000000),
+                                  offset: Offset(0, 4),
+                                  blurRadius: 7,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Pinned.fromPins(
+                            Pin(size: 185.0, middle: 0.59),
+                            Pin(size: 58.0, end: 20),
+                            child: const Text(
+                              'A Drink',
+                              style: TextStyle(
+                                fontFamily: 'Roboto Mono',
+                                fontSize: 44,
+                                color: XDColors.text,
+                              ),
+                              softWrap: false,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Pinned.fromPins(Pin(start: 83.9, end: 82.9),
+                          Pin(size: 219.9, start: 61.6),
+                          child: GestureDetector(
+                            child:
+                                // Adobe XD layer: 'water_full_FILL0_wg…' (shape)
+                                SvgPicture.string(
+                              _svg_h4mzdo,
+                              allowDrawingOutsideViewBox: true,
+                              fit: BoxFit.fill,
+                            ),
+                          ))
+                    ],
+                  ))),
           Pinned.fromPins(
-            Pin(size: 340, middle: 0.605),
+            Pin(size: 340, middle: 0.399),
             Pin(size: 370, start: 20),
             child: PageLink(
               links: [
@@ -137,7 +140,7 @@ class MainSelection extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 340, middle: 0.98),
+            Pin(size: 340, end: 210),
             Pin(size: 370, start: 20),
             child: PageLink(
               links: [
@@ -193,14 +196,14 @@ class MainSelection extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 340, middle: 0.23),
+            Pin(size: 340, start: 20),
             Pin(size: 370.0, end: 20),
             child: PageLink(
               links: [
                 PageLinkInfo(
                   ease: Curves.easeInOutExpo,
                   duration: 0.3,
-                  pageBuilder: () => TeaMenu(),
+                  pageBuilder: () => const TeaMenu(),
                 ),
               ],
               child: Stack(
@@ -247,7 +250,7 @@ class MainSelection extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 340, middle: 0.605),
+            Pin(size: 340, middle: 0.399),
             Pin(size: 370, end: 20),
             child: GestureDetector(
                 onTap: () {
@@ -304,14 +307,14 @@ class MainSelection extends StatelessWidget {
                 )),
           ),
           Pinned.fromPins(
-            Pin(size: 340, end: 18),
+            Pin(size: 340, end: 210),
             Pin(size: 370, end: 20),
             child: PageLink(
               links: [
                 PageLinkInfo(
                   ease: Curves.easeInOutExpo,
                   duration: 0.3,
-                  pageBuilder: () => ToiletriesMenu(),
+                  pageBuilder: () => const ToiletriesMenu(),
                 ),
               ],
               child: Stack(
@@ -358,14 +361,12 @@ class MainSelection extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 81.6, start: 55.0),
+            Pin(size: 81.6, end: 50.0),
             Pin(size: 137.5, end: 40.0),
-            child:
-                // Adobe XD layer: 'Back Button' (component)
-                const HomeButton(),
+            child: const HomeButton(),
           ),
           Pinned.fromPins(
-            Pin(size: 180.0, start: 15.7),
+            Pin(size: 180.0, end: 10),
             Pin(size: 246.5, middle: 0.22),
             child:
                 // Adobe XD layer: 'Back Button' (component)

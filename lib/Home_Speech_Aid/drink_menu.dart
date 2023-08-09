@@ -2,15 +2,15 @@ import 'package:adobe_xd/page_link.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:speechAid/main_selection.dart';
-import 'package:speechAid/speech_tts.dart';
-import 'package:speechAid/xd_colors.dart';
+import 'package:speechAid/Home_Speech_Aid/speech_tts.dart';
+import 'package:speechAid/Home_Speech_Aid/xd_colors.dart';
 
-import './back_button.dart';
+import 'back_button.dart';
 import 'home_button.dart';
+import 'main_selection.dart';
 
-class TeaMenu extends StatelessWidget {
-  const TeaMenu({
+class DrinkMenu extends StatelessWidget {
+  const DrinkMenu({
     Key? key,
   }) : super(key: key);
 
@@ -20,10 +20,10 @@ class TeaMenu extends StatelessWidget {
         backgroundColor: const Color(0xfff7f7fa),
         body: Stack(children: <Widget>[
           Pinned.fromPins(
-              Pin(size: 500.0, middle: 0.290), Pin(size: 580.0, middle: 0.5),
+              Pin(size: 500.0, end: 220), Pin(size: 580.0, middle: 0.5),
               child: GestureDetector(
                 onTap: () {
-                  TextToSpeech.speak('I want to have my tea in my room please');
+                  TextToSpeech.speak('I want some juice please');
                 },
                 child:
                     // Adobe XD layer: 'Widget' (group)
@@ -43,10 +43,21 @@ class TeaMenu extends StatelessWidget {
                       ),
                     ),
                     Pinned.fromPins(
-                      Pin(start: 44.0, end: 43.0),
-                      Pin(size: 92.0, end: 20.0),
+                      Pin(size: 290, end: 110),
+                      Pin(size: 320, end: 150),
+                      child:
+                          // Adobe XD layer: 'water_full_FILL0_wg…' (shape)
+                          SvgPicture.string(
+                        _svg_h4mzdo,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    Pinned.fromPins(
+                      Pin(size: 200, middle: 0.5),
+                      Pin(size: 81.0, end: 20.0),
                       child: const Text(
-                        'Eat In Room',
+                        'Juice',
                         style: TextStyle(
                           fontFamily: 'Roboto Mono',
                           fontSize: 70,
@@ -55,20 +66,11 @@ class TeaMenu extends StatelessWidget {
                         softWrap: false,
                       ),
                     ),
-                    Pinned.fromPins(
-                      Pin(size: 330.5, middle: 0.5),
-                      Pin(size: 330.0, start: 80.0),
-                      child: SvgPicture.string(
-                        _svg_fr9apc,
-                        allowDrawingOutsideViewBox: true,
-                        fit: BoxFit.fill,
-                      ),
-                    ),
                   ],
                 ),
               )),
           Pinned.fromPins(
-            Pin(size: 180.0, start: 15.7),
+            Pin(size: 180.0, end: 15.7),
             Pin(size: 246.5, middle: 0.22),
             child:
                 // Adobe XD layer: 'Back Button' (component)
@@ -84,10 +86,10 @@ class TeaMenu extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-              Pin(size: 500.0, end: 30.0), Pin(size: 580.0, middle: 0.5),
+              Pin(size: 500.0, start: 30), Pin(size: 580.0, middle: 0.5),
               child: GestureDetector(
                 onTap: () {
-                  TextToSpeech.speak('I want to eat in the dining room please');
+                  TextToSpeech.speak('I want a cup of tea please');
                 },
                 child: Stack(
                   children: <Widget>[
@@ -107,26 +109,13 @@ class TeaMenu extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromPins(
-                          Pin(size: 400.0, middle: 0.95),
-                          Pin(size: 81.0, end: 71.0),
+                          Pin(size: 150, middle: 0.5),
+                          Pin(size: 81.0, end: 20.0),
                           child: const Text(
-                            'Eat In The',
+                            'Tea',
                             style: TextStyle(
                               fontFamily: 'Roboto Mono',
-                              fontSize: 61,
-                              color: XDColors.text,
-                            ),
-                            softWrap: false,
-                          ),
-                        ),
-                        Pinned.fromPins(
-                          Pin(size: 400.0, middle: 0.6),
-                          Pin(size: 81.0, end: 12.0),
-                          child: const Text(
-                            'Dining Room',
-                            style: TextStyle(
-                              fontFamily: 'Roboto Mono',
-                              fontSize: 61,
+                              fontSize: 70,
                               color: XDColors.text,
                             ),
                             softWrap: false,
@@ -135,22 +124,22 @@ class TeaMenu extends StatelessWidget {
                       ],
                     ),
                     Pinned.fromPins(
-                      Pin(size: 247.5, middle: 0.4992),
+                      Pin(size: 247.5, start: 45),
                       Pin(size: 330.0, start: 71.0),
                       child:
                           // Adobe XD layer: 'restaurant_FILL0_wg…' (shape)
-                          SvgPicture.string(
-                        _svg_zca30,
-                        allowDrawingOutsideViewBox: true,
-                        fit: BoxFit.fill,
+                          const Icon(
+                        Icons.free_breakfast_outlined,
+                        size: 400,
+                        color: XDColors.icons,
                       ),
                     ),
                   ],
                 ),
               )),
           Pinned.fromPins(
-            Pin(size: 81.6, start: 55.0),
-            Pin(size: 137.5, end: 40.0),
+            Pin(size: 150, end: 20.0),
+            Pin(size: 170.5, end: 120.0),
             child:
                 // Adobe XD layer: 'Back Button' (component)
                 const HomeButton(),
@@ -165,3 +154,5 @@ const String _svg_e95y6w =
     '<svg viewBox="1789.3 1042.5 81.6 91.8" ><path transform="translate(1629.29, 1882.53)" d="M 167.6505279541016 -755.8441162109375 L 186.77685546875 -755.8441162109375 L 186.77685546875 -787.7213134765625 L 214.8288421630859 -787.7213134765625 L 214.8288421630859 -755.8441162109375 L 233.9551544189453 -755.8441162109375 L 233.9551544189453 -805.5726318359375 L 200.8028411865234 -830.4368896484375 L 167.6505279541016 -805.5726318359375 L 167.6505279541016 -755.8441162109375 Z M 160 -748.193603515625 L 160 -809.39794921875 L 200.8028411865234 -840 L 241.6056976318359 -809.39794921875 L 241.6056976318359 -748.193603515625 L 207.1782989501953 -748.193603515625 L 207.1782989501953 -780.07080078125 L 194.4274139404297 -780.07080078125 L 194.4274139404297 -748.193603515625 L 160 -748.193603515625 Z M 200.8028411865234 -793.2042236328125 Z" fill="#d84f99" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
 const String _svg_zca30 =
     '<svg viewBox="1300.0 361.0 247.5 330.0" ><path transform="translate(1140.0, 1241.0)" d="M 211.5623779296875 -550.0008544921875 L 211.5623779296875 -701.8004760742188 C 197.2624053955078 -704.8255004882812 185.0936889648438 -712.0442504882812 175.0562133789062 -723.4567260742188 C 165.0187530517578 -734.8692016601562 160 -748.5503540039062 160 -764.5003662109375 L 160 -880.0000610351562 L 184.7499389648438 -880.0000610351562 L 184.7499389648438 -764.5003662109375 L 211.5623779296875 -764.5003662109375 L 211.5623779296875 -880.0000610351562 L 236.3123168945312 -880.0000610351562 L 236.3123168945312 -764.5003662109375 L 263.1247253417969 -764.5003662109375 L 263.1247253417969 -880.0000610351562 L 287.8746948242188 -880.0000610351562 L 287.8746948242188 -764.5003662109375 C 287.8746948242188 -748.5503540039062 282.8559875488281 -734.8692016601562 272.8184814453125 -723.4567260742188 C 262.781005859375 -712.0442504882812 250.6122741699219 -704.8255004882812 236.3123168945312 -701.8004760742188 L 236.3123168945312 -550.0008544921875 L 211.5623779296875 -550.0008544921875 Z M 382.7494812011719 -550.0008544921875 L 382.7494812011719 -682.0005493164062 L 335.3120727539062 -682.0005493164062 L 335.3120727539062 -807.812744140625 C 335.3120727539062 -829.5377197265625 341.9120788574219 -847.0001220703125 355.1120300292969 -860.2001342773438 C 368.31201171875 -873.4000854492188 385.7744445800781 -880.0000610351562 407.4993896484375 -880.0000610351562 L 407.4993896484375 -550.0008544921875 L 382.7494812011719 -550.0008544921875 Z" fill="#d84f99" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
+const String _svg_h4mzdo =
+    '<svg viewBox="83.9 61.6 198.0 219.9" ><path transform="translate(-36.09, 941.63)" d="M 209.0829010009766 -805.771484375 C 198.0850067138672 -805.771484375 187.1787872314453 -803.9844970703125 176.3641815185547 -800.41064453125 C 165.5495910644531 -796.836669921875 155.7431335449219 -791.84228515625 146.94482421875 -785.427490234375 L 159.0425109863281 -676.55908203125 L 278.9194641113281 -676.55908203125 L 291.8420104980469 -794.774658203125 L 278.6445617675781 -794.774658203125 C 271.8171997070312 -794.774658203125 265.57373046875 -795.2786865234375 259.9140625 -796.286865234375 C 254.2545471191406 -797.2947998046875 246.4757385253906 -799.1734619140625 236.57763671875 -801.9227294921875 C 231.9951629638672 -803.20556640625 227.4585418701172 -804.1678466796875 222.9677429199219 -804.809326171875 C 218.4769134521484 -805.4508056640625 213.8486480712891 -805.771484375 209.0829010009766 -805.771484375 Z M 145.0202026367188 -803.84716796875 C 154.3683929443359 -809.712158203125 164.5872802734375 -814.202392578125 175.6768035888672 -817.3182373046875 C 186.7663421630859 -820.4339599609375 197.9017181396484 -822.08349609375 209.0829010009766 -822.2667236328125 C 214.5818176269531 -822.2667236328125 220.0349578857422 -821.9002685546875 225.4422760009766 -821.1671142578125 C 230.8495483398438 -820.4339599609375 236.0277099609375 -819.334228515625 240.9767761230469 -817.8680419921875 C 250.3484497070312 -815.3021240234375 257.5177612304688 -813.56103515625 262.4848022460938 -812.64453125 C 267.4516296386719 -811.7281494140625 272.7465515136719 -811.2698974609375 278.3695983886719 -811.2698974609375 L 293.7666015625 -811.2698974609375 L 299.54052734375 -863.5047607421875 L 138.4214630126953 -863.5047607421875 L 145.0202026367188 -803.84716796875 Z M 159.0425109863281 -660.0638427734375 C 154.7808227539062 -660.0638427734375 151.0690460205078 -661.43212890625 147.9071502685547 -664.16845703125 C 144.7452392578125 -666.9046630859375 142.9580841064453 -670.3934326171875 142.5456695556641 -674.6346435546875 L 120 -880 L 317.9620056152344 -880 L 295.4163208007812 -674.6346435546875 C 295.00390625 -670.3934326171875 293.2167358398438 -666.9046630859375 290.0548400878906 -664.16845703125 C 286.8929443359375 -661.43212890625 283.1811828613281 -660.0638427734375 278.9194641113281 -660.0638427734375 L 159.0425109863281 -660.0638427734375 Z M 209.0829010009766 -676.55908203125 L 278.6445617675781 -676.55908203125 L 159.0425109863281 -676.55908203125 L 209.0829010009766 -676.55908203125 Z" fill="#d84f99" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';

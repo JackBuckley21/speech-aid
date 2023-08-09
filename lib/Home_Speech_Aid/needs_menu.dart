@@ -2,11 +2,10 @@ import 'package:adobe_xd/page_link.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:speechAid/Toilet_time.dart';
-import 'package:speechAid/main_menu.dart';
-import 'package:speechAid/speech_tts.dart';
-import 'package:speechAid/xd_colors.dart';
-
+import 'package:speechAid/Home_Speech_Aid/Toilet_time.dart';
+import 'package:speechAid/Home_Speech_Aid/main_menu.dart';
+import 'package:speechAid/Home_Speech_Aid/speech_tts.dart';
+import 'package:speechAid/Home_Speech_Aid/xd_colors.dart';
 import 'back_button.dart';
 
 class NeedMenu extends StatelessWidget {
@@ -21,7 +20,7 @@ class NeedMenu extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Pinned.fromPins(
-              Pin(size: 500.0, middle: 0.290), Pin(size: 580.0, middle: 0.5),
+              Pin(size: 500.0, end: 220), Pin(size: 580.0, middle: 0.5),
               child: GestureDetector(
                 onTap: () {
                   TextToSpeech.speak('I need the toilet.');
@@ -67,10 +66,10 @@ class NeedMenu extends StatelessWidget {
                 ),
               )),
           Pinned.fromPins(
-              Pin(size: 500.0, end: 30.0), Pin(size: 580.0, middle: 0.5),
+              Pin(size: 500.0, start: 30), Pin(size: 580.0, middle: 0.5),
               child: GestureDetector(
                 onTap: () {
-                  TextToSpeech.speak('I need a nurse.');
+                  TextToSpeech.speak('CALL 9 9 9 PLEASE.');
                 },
                 child: Stack(
                   children: <Widget>[
@@ -93,7 +92,7 @@ class NeedMenu extends StatelessWidget {
                           Pin(size: 300, middle: 0.63),
                           Pin(size: 81.0, end: 20),
                           child: const Text(
-                            'A Nurse',
+                            'Call 999',
                             style: TextStyle(
                               fontFamily: 'Roboto Mono',
                               fontSize: 61,
@@ -119,7 +118,7 @@ class NeedMenu extends StatelessWidget {
                 ),
               )),
           Pinned.fromPins(
-            Pin(size: 180.0, start: 15.7),
+            Pin(size: 180.0, end: 15.7),
             Pin(size: 246.5, middle: 0.22),
             child:
                 // Adobe XD layer: 'Back Button' (component)
@@ -135,11 +134,9 @@ class NeedMenu extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 81.6, start: 55.0),
-            Pin(size: 137.5, end: 40.0),
-            child:
-                // Adobe XD layer: 'Back Button' (component)
-                const ToiletTime(),
+            Pin(size: 170, end: 15.0),
+            Pin(size: 170.5, end: 120.0),
+            child: const ToiletTime(),
           ),
         ],
       ),
